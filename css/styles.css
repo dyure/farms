@@ -129,11 +129,21 @@ html {
 * wrapper and so on
 *
 */
-.wrapper {
+.wrapper_80,
+.wrapper_45,
+.wrapper_0 {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.wrapper_80 {
     margin-bottom: 80px;
+}
+.wrapper_45 {
+    margin-bottom: 45px;
+}
+.wrapper_0 {
+    margin-bottom: 0;
 }
 ._body {
     width: 1400px;
@@ -378,61 +388,6 @@ html {
 @media screen and (max-width: 1399px) {
     .items_1 {
         column-gap: 73px;
-    }
-}
-/* < 1200px */
-@media screen and (max-width: 1199px) {}
-/* < 768px */
-@media screen and (max-width: 767px) {}
-/* < 575px */
-@media screen and (max-width: 575px) {}
-/**
-*
-* free_consult section
-*
-*/
-.free_consult {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    background-color: #282828;
-    opacity: 0.8;
-    height: 370px;
-}
-.free_consult .parallax {
-    background-image: url("../img/parallax1.png");
-    max-width: 1400px;
-    height: 370px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-attachment: fixed;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* .free_consult .parallax_bg {
-    background-color: #282828;
-    opacity: 0.8;
-    height: 370px;
-} */
-.free_consult .parallax_text h2,
-.free_consult .parallax_text p {
-    padding-left: 37px;
-    width: 632px;
-}
-.free_consult .parallax_text h2 {
-    padding-top: 60px;
-    margin-bottom: 20px;
-}
-.free_consult .parallax_text p {
-    margin-bottom: 55px;
-}
-/* < 1400px */
-@media screen and (max-width: 1399px) {
-    .free_consult .parallax_text h2,
-    .free_consult .parallax_text p {
-        padding-left: 127px;
-        width: 635px;
     }
 }
 /* < 1200px */
@@ -692,21 +647,19 @@ html {
 @media screen and (max-width: 575px) {}
 /**
 *
-* rent section
+* parallax section
 *
 */
-.rent {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    background-color: #282828;
-    opacity: 0.8;
-    height: 485px;
+.parallax_out.part1 {
+    background-image: url("../img/parallax1.png");
 }
-.rent .parallax {
+.parallax_out.part2 {
     background-image: url("../img/parallax2.png");
-    max-width: 1400px;
-    height: 485px;
+}
+.parallax_out.part3 {
+    background-image: url("../img/parallax3.png");
+}
+.parallax_out {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -714,30 +667,38 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
-/* .rent .parallax_bg {
+.parallax {
     background-color: #282828;
     opacity: 0.8;
+    width: 100%;
+}
+.parallax_out.part1 ._body {
+    height: 370px;
+    padding-top: 60px;
+}
+.parallax_out.part2 ._body,
+.parallax_out.part3 ._body {
     height: 485px;
-} */
-.rent .parallax_text h2,
-.rent .parallax_text p {
-    padding-left: 37px;
+    padding-top: 60px;
+}
+.parallax_out.part1 h2,
+.parallax_out.part1 p {
+    width: 635px;
+}
+.parallax_out.part2 h2,
+.parallax_out.part2 p,
+.parallax_out.part3 h2,
+.parallax_out.part3 p {
     width: 700px;
 }
-.rent .parallax_text h2 {
-    padding-top: 60px;
+.parallax_out h2 {
     margin-bottom: 20px;
 }
-.rent .parallax_text p {
+.parallax_out p {
     margin-bottom: 20px;
 }
 /* < 1400px */
-@media screen and (max-width: 1399px) {
-    .rent .parallax_text h2,
-    .rent .parallax_text p {
-        padding-left: 127px;
-    }
-}
+@media screen and (max-width: 1399px) {}
 /* < 1200px */
 @media screen and (max-width: 1199px) {}
 /* < 768px */
@@ -751,9 +712,25 @@ html {
 */
 .form_phone {
     margin-top: 55px;
+    position: relative;
+}
+.form_phone::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* анимированная картинка загрузки */
+    background: rgba(51, 51, 51, 0.9) url() center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+}
+.form_phone._sending::after {
+    opacity: 1;
+    visibility: visible;
 }
 .input_phone {
-    margin-left: 37px;
     background-color: #282828;
     color: #f6f6f6;
     width: 273px;
@@ -765,6 +742,9 @@ html {
     line-height: 25px;
     letter-spacing: 0.02em;
     margin-right: 30px;
+}
+.input_phone._error {
+    border-bottom: 1px solid #cc0000;
 }
 .input_phone::placeholder {
     color: #f6f6f6;
@@ -790,11 +770,7 @@ html {
     background-color: rgba(0, 0, 0, 1);
 }
 /* < 1400px */
-@media screen and (max-width: 1399px) {
-    .input_phone {
-        margin-left: 127px;
-    }
-}
+@media screen and (max-width: 1399px) {}
 /* < 1200px */
 @media screen and (max-width: 1199px) {}
 /* < 768px */
@@ -806,6 +782,19 @@ html {
 * portfolio section
 *
 */
+.owl_items {
+	display: grid;
+	grid-template-areas: "item_1 item_2"; 
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+    column-gap: 33px;
+}
+.owl_items .item_1 {
+	grid-area: item_1;
+}
+.owl_items .item_2 {
+	grid-area: item_2;
+}
 .portfolio h2 {
     margin-bottom: 50px;
 }
@@ -827,7 +816,7 @@ html {
     text-align: right!important;
     position: absolute;
     right: -10px;
-    bottom: 30px;
+    bottom: 80px;
 }
 .owl-dot span {
     background-color: #f1f1f1!important;
@@ -858,60 +847,6 @@ html {
     .owl-prev, .owl-next {
         top: 175px;
     }}
-/* < 1200px */
-@media screen and (max-width: 1199px) {}
-/* < 768px */
-@media screen and (max-width: 767px) {}
-/* < 575px */
-@media screen and (max-width: 575px) {}
-/**
-*
-* calc section
-*
-*/
-.calc {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    background-color: #282828;
-    opacity: 0.8;
-    height: 485px;
-}
-.calc .parallax {
-    background-image: url("../img/parallax3.png");
-    max-width: 1400px;
-    height: 485px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-attachment: fixed;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* .calc .parallax_bg {
-    background-color: #282828;
-    opacity: 0.8;
-    height: 485px;
-} */
-.calc .parallax_text h2,
-.calc .parallax_text p {
-    padding-left: 37px;
-    width: 620px;
-}
-.calc .parallax_text h2 {
-    padding-top: 60px;
-    margin-bottom: 20px;
-}
-.calc .parallax_text p {
-    margin-bottom: 20px;
-}
-/* < 1400px */
-@media screen and (max-width: 1399px) {
-    .calc .parallax_text h2,
-    .calc .parallax_text p {
-        padding-left: 127px;
-    }
-}
 /* < 1200px */
 @media screen and (max-width: 1199px) {}
 /* < 768px */
@@ -991,11 +926,6 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-.wrapper_last {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 .footer .title {
     margin-top: 60px;
