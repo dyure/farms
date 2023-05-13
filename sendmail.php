@@ -1,57 +1,56 @@
 <?php
-
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-
-// require 'phpmailer/src/Exception.php';
+error_reporting(E_ALL); 
+ini_set("display_errors", 1);
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 // require 'phpmailer/src/PHPMailer.php';
+// require 'phpmailer/src/SMTP.php';
 
-// $mail = new PHPMailer(true);
-// $mail->CharSet = 'UTF-8';
-// $mail->setLanguage('ru', 'phpmailer/language');
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
-//Server settings
-// $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-// $mail->isSMTP();                                            //Send using SMTP
-// $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-// $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-// $mail->Username   = 'user@example.com';                     //SMTP username
-// $mail->Password   = 'secret';                               //SMTP password
-// $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-// $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
-//Recipients
-// $mail->setFrom('sobranieinfo@yandex.ru', 'dyure');
-// $mail->addAddress('sobranieinfo@yandex.ru', 'dyure');     //Add a recipient
-// $mail->addAddress('ellen@example.com');               //Name is optional
-// $mail->addReplyTo('info@example.com', 'Information');
-// $mail->addCC('cc@example.com');
-// $mail->addBCC('bcc@example.com');
+try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.mail.ru';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'sobranieinfo@mail.ru';                     //SMTP username
+    $mail->Password   = 'ybaw5mmQ68LmBmwha2B1';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-//Attachments
-// $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+    //Recipients
+    $mail->setFrom('sobranieinfo@mail.ru', 'Mailer');
+    $mail->addAddress('sobranieinfo@mail.ru', 'Joe User');     //Add a recipient
+    // $mail->addAddress('ellen@example.com');               //Name is optional
+    // $mail->addReplyTo('info@example.com', 'Information');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
 
-//Content
-// $mail->isHTML(true);                                  //Set email format to HTML
-// $mail->Subject = 'Это письмо с сайта Металлические фермы';
-// $mail->Body    = 'Телефон: ';
+    //Attachments
+    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
-$to  = 'sobranieinfo@yandex.ru'; 
-$subject = 'Это письмо с сайта Металлические фермы'; 
-$message = 'Телефон: ';
-if (trim(!empty($_POST['fldPhone']))){
-    $message .= $_POST['fldPhone'];
-}
-$headers  = "Content-type: text/html; charset=UTF-8 \r\n"; 
-$headers .= "From: От кого письмо <sobranieinfo@yandex.ru>\r\n"; 
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Это письмо с сайта Металлические фермы';
+    $mail->Body    = 'Телефон: ';
+    if (trim(!empty($_POST['fldPhone']))){
+        $mail->Body .= $_POST['fldPhone'];
+    }
+    // //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-if (!mail($to, $subject, $message, $headers)) {
-    $message = 'Ошибка';
-} else {
-    $message = 'Письмо отправлено';
+    $mail->send();
+    $message = 'Message has been sent';
+} catch (Exception $e) {
+    $message = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 $response = ['message' => $message];

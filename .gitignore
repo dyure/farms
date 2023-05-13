@@ -1,6 +1,5 @@
 
 *.json
 .vscode
-phpmailer
 vendor
 *.lock

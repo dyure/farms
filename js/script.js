@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
         input.classList.add('_error');
     }
 
-    //уберем класс _error правильно заполненному полю
+    //уберем класс _error из правильно заполненного поля
     function formRemoveError(input){
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
