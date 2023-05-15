@@ -12,18 +12,19 @@ document.addEventListener('DOMContentLoaded', function(){
         //функция валидации полей
         let error = formValidate(form);
         //получим данные формы
-        let formData = new  FormData(form);
+        let formData = new FormData(form);
 
         if (error === 0) {
             //если все ок, добавим класс _sending, который скроет форму и добавит анимированную картинку
             form.classList.add('_sending');
-            let response = await fetch('sendmail.php', {
+            const response = await fetch('sendmail.php', {
                 method: 'POST',
                 body: formData
             });
+            
             if (response.ok){
-                let result = await response.json();
-                alert(result.message);
+                //let result = await response.json();
+                alert(response.ok);
                 form.reset();
                 form.classList.remove('_sending');
             } else {
@@ -41,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function(){
         let formRequired = document.querySelectorAll('._required');
         //цикл по обязательным полям
         for (let index = 0; index < formRequired.length; index++){
-            //alert('!!!');
             const input = formRequired[index];
             formRemoveError(input);
             if (input.classList.contains('input_phone')) {

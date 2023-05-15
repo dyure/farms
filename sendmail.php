@@ -26,6 +26,9 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+    //Other settings
+    $mail->CharSet = 'UTF-8';
+
     //Recipients
     $mail->setFrom('sobranieinfo@mail.ru', 'Mailer');
     $mail->addAddress('sobranieinfo@mail.ru', 'Joe User');     //Add a recipient
@@ -50,9 +53,9 @@ try {
     $mail->send();
     $message = 'Message has been sent';
 } catch (Exception $e) {
-    $message = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    $message = 'Message could not be sent. Mailer Error: {$mail->ErrorInfo}';
 }
 
 $response = ['message' => $message];
-header('Content-type: application/json');
+header('Content-Type: application/json');
 echo json_encode($response);
