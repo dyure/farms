@@ -1,21 +1,29 @@
 "use strict"
 //после полной загрузки документа
 document.addEventListener('DOMContentLoaded', function(){
-    //объявляем переменную form, в которую помещаются все поля формы
-    const form = document.getElementById('form');
-    //отслеживаем нажатие кнопки и передаем работу в функцию formSend
-    form.addEventListener('submit', formSend);
 
+    const inputPhone = document.querySelector("input");
+    inputPhone.addEventListener("input", updateValue);
+    //проверка на количество введенных символов
+    function updateValue(e) {
+        if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11) {
+            $('.button_phone').addClass('active');
+            $('._error_input').css('display', 'none');
+        } else {
+            $('.button_phone').removeClass('active');
+            $('._error_input').css('display', 'block');
+        }
+    }
+    
+    const form = document.getElementById('form');
+    form.addEventListener('submit', formSend);
+    //отправка формы если нет ошибок и количество символов 11
     async function formSend(e){
-        //запрещение стандартной обработки формы
         e.preventDefault();
-        //функция валидации полей
         let error = formValidate(form);
-        //получим данные формы
         let formData = new FormData(form);
 
-        if (error === 0) {
-            //если все ок, добавим класс _sending, который скроет форму и добавит анимированную картинку
+        if (error === 0 && $('.button_phone').hasClass('active')) {
             form.classList.add('_sending');
             const response = await fetch('sendmail.php', {
                 method: 'POST',
@@ -24,15 +32,16 @@ document.addEventListener('DOMContentLoaded', function(){
             
             if (response.ok){
                 //let result = await response.json();
-                alert(response.ok);
+                // alert(response.ok);
                 form.reset();
                 form.classList.remove('_sending');
             } else {
-                alert ('Ошибка!');
+                //alert ('Ошибка!');
                 form.classList.remove('_sending');
             }
         } else {
-            alert('Заполните поле правильно!');
+            // alert('Заполните поле правильно!');
+            $('._error_input').css('display','block');
         }
     }
 
@@ -64,14 +73,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //добавим класс _error не правильно заполненному полю
     function formAddError(input){
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
+        // input.parentElement.classList.add('_error');
+        // input.classList.add('_error');
     }
 
     //уберем класс _error из правильно заполненного поля
     function formRemoveError(input){
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
+        // input.parentElement.classList.remove('_error');
+        // input.classList.remove('_error');
+        $('._error_input').css('display','none');
     }
 
     //проверка телефона
