@@ -1109,14 +1109,17 @@ html {
     opacity: 0.8;
     width: 100%;
 }
+.parallax_out.part1 ._body,
+.parallax_out.part2 ._body,
+.parallax_out.part3 ._body {
+    padding-top: 60px;
+}
 .parallax_out.part1 ._body {
     height: 370px;
-    padding-top: 60px;
 }
 .parallax_out.part2 ._body,
 .parallax_out.part3 ._body {
     height: 485px;
-    padding-top: 60px;
 }
 .parallax_out.part1 h2,
 .parallax_out.part1 p {
@@ -1128,12 +1131,23 @@ html {
 .parallax_out.part3 p {
     width: 620px;
 }
-.parallax_out h2 {
+.parallax_out.part1 h2,
+.parallax_out.part2 h2,
+.parallax_out.part3 h2 {
     margin-bottom: 20px;
 }
-.parallax_out p {
+.parallax_out.part1 p {
+    margin-bottom: 55px;
+}
+.parallax_out.part2 p,
+.parallax_out.part3 p {
     margin-bottom: 20px;
 }
+.parallax_out.part2 p.last,
+.parallax_out.part3 p.last {
+    margin-bottom: 55px;
+}
+
 /* < 1400px */
 @media screen and (max-width: 1399px) {
     .parallax_out.part1 h2,
@@ -1157,7 +1171,8 @@ html {
     }
     .parallax_out.part3 {
         background-image: url("../img/parallax3_1200.png");
-    }    .parallax_out.part1 h2,
+    }    
+    .parallax_out.part1 h2,
     .parallax_out.part1 p {
         width: 532px;
     }
@@ -1170,9 +1185,24 @@ html {
 }
 /* < 768px */
 @media screen and (max-width: 767px) {
+    .parallax_out.part1 ._body,
+    .parallax_out.part2 ._body,
+    .parallax_out.part3 ._body {
+        padding-top: 40px;
+    }
+    .parallax_out.part1 ._body {
+        height: 294px;
+    }
+    .parallax_out.part2 ._body,
+    .parallax_out.part3 ._body {
+        height: 444px;
+    }
     .parallax_out.part1 h2,
     .parallax_out.part1 p {
         width: 400px;
+    }
+    .parallax_out.part1 p {
+        margin-bottom: 50px;
     }
     .parallax_out.part2 h2,
     .parallax_out.part2 p,
@@ -1180,19 +1210,53 @@ html {
     .parallax_out.part3 p {
         width: 534px;
     }
-
+    .parallax_out.part1 h2,
+    .parallax_out.part2 h2,
+    .parallax_out.part3 h2 {
+        margin-bottom: 20px;
+    }
+    .parallax_out.part2 p.last,
+    .parallax_out.part3 p.last {
+        margin-bottom: 50px;
+    }
 }
 /* < 575px */
 @media screen and (max-width: 575px) {
+    .parallax_out.part1 ._body,
+    .parallax_out.part2 ._body,
+    .parallax_out.part3 ._body {
+        padding-top: 30px;
+    }
+    .parallax_out.part1 ._body {
+        height: 347px;
+    }
+    .parallax_out.part2 ._body {
+        height: 520px;
+    }
+    .parallax_out.part3 ._body {
+        height: 530px;
+    }
     .parallax_out.part1 h2,
     .parallax_out.part1 p {
-        width: 335px;
+        width: 100%;
+    }
+    .parallax_out.part1 h2,
+    .parallax_out.part2 h2,
+    .parallax_out.part3 h2 {
+        margin-bottom: 10px;
+    }
+    .parallax_out.part1 p {
+        margin-bottom: 30px;
     }
     .parallax_out.part2 h2,
     .parallax_out.part2 p,
     .parallax_out.part3 h2,
     .parallax_out.part3 p {
-        width: 335px;
+        width: 100%;
+    }
+    .parallax_out.part2 p.last,
+    .parallax_out.part3 p.last {
+        margin-bottom: 30px;
     }
 }
 /**
@@ -1201,7 +1265,6 @@ html {
 *
 */
 .form_phone {
-    margin-top: 55px;
     position: relative;
 }
 .form_phone::after {
@@ -1233,7 +1296,9 @@ html {
     letter-spacing: 0.02em;
     margin-right: 30px;
 }
-._error_input {
+#error_input1,
+#error_input2,
+#error_input3 {
     display: none;
     width: 273px;
     height: 26px;
@@ -1244,6 +1309,11 @@ html {
     top: 60px;
     left: 0;
 }
+#error_input1.active,
+#error_input2.active,
+#error_input3.active {
+    display: block;
+}
 .input_phone::placeholder {
     color: #f6f6f6;
     font-weight: 600;
@@ -1251,7 +1321,9 @@ html {
     line-height: 25px;
     letter-spacing: 0.02em;
 }
-.button_phone {
+#button_phone1,
+#button_phone2,
+#button_phone3 {
     background-color: rgba(0, 0, 0, 0.1);
     color: #f6f6f6;
     width: 273px;
@@ -1264,7 +1336,9 @@ html {
     text-transform: uppercase;
     cursor: pointer;
 }
-.button_phone.active {
+#button_phone1.active,
+#button_phone2.active,
+#button_phone3.active {
     background-color: rgba(0, 0, 0, 1);
 }
 /* < 1400px */
@@ -1272,9 +1346,42 @@ html {
 /* < 1200px */
 @media screen and (max-width: 1199px) {}
 /* < 768px */
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .input_phone {
+        width: 252px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #error_input1,
+    #error_input2,
+    #error_input3 {
+        width: 252px;
+    }
+    #button_phone1,
+    #button_phone2,
+    #button_phone3 {
+        width: 252px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
 /* < 575px */
-@media screen and (max-width: 575px) {}
+@media screen and (max-width: 575px) {
+    .input_phone {
+        width: 239px;
+    }
+    #error_input1,
+    #error_input2,
+    #error_input3 {
+        width: 239px;
+    }
+    #button_phone1,
+    #button_phone2,
+    #button_phone3 {
+        width: 239px;
+        margin-top: 47px;
+    }
+}
 /**
 *
 * portfolio section
@@ -1393,11 +1500,11 @@ html {
 *
 */
 .faq h2 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .quest {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 54px;
     background-color: #F6F6F6;
@@ -1436,12 +1543,27 @@ html {
 }
 /* < 768px */
 @media screen and (max-width: 767px) {
+    .faq h2 {
+        margin-bottom: 30px;
+    }
+    .quest {
+        height: 50px;
+        padding-left: 15px;
+        padding-right: 109px;
+    }
     .quest::after {
         right: 20px;
     }
 }
 /* < 575px */
 @media screen and (max-width: 575px) {
+    .faq h2 {
+        margin-bottom: 20px;
+    }
+    .quest {
+        height: 70px;
+        padding-right: 60px;
+    }
     .quest::after {
         right: 8px;
     }
@@ -1512,6 +1634,9 @@ html {
         column-gap: 124px;
         row-gap: 40px;
         margin-bottom: 40px;
+    }
+    .p1, .p2 {
+        margin-bottom: 10px;
     }
 }
 /* < 768px */
