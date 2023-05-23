@@ -10,7 +10,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Металлические фермы</title>
 </head>
-<body>
+<body></body>
+
+
+<div class="dm-overlay" id="win1">
+    <div class="dm-table">
+        <div class="dm-cell">
+            <div class="dm-modal">
+                <div class="close">
+                    <img src="img/close.png" alt="">
+                </div>
+                <div class="success">
+                    <img src="img/successfully.png" alt="">
+                </div>
+                <h2 class="f_600_35_40 form_title">Бесплатная<br>консультация&nbsp;специалиста</h2>
+                <p class="f_600_18_25">Мы свяжемся с вами в течение рабочего&nbsp;дня</p>
+                <form id="form4" class="form_phone" action="#">
+                    <input id="4" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
+                    <div id="error_input4" class="f_600_14_26">Введите корректный номер</div>
+                    <button id="button_phone4" type="submit">Заказать консультацию</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
     <section class="header wrapper_80">
         <div class="_body">
             <div class="header_body">
@@ -28,7 +52,7 @@
                 </ul>
                 <div class="catalogue f_600_16_20 white">КАТАЛОГ ФЕРМ</div>
                 <div class="consult">
-                    <a class="f_600_16_20 white" href="#consult">КОНСУЛЬТАЦИЯ</a>
+                    <p class="f_600_16_20 white">КОНСУЛЬТАЦИЯ</p>
                 </div>
                 <div class="whatsapp">
                     <img src="img/WA.png" alt="">
@@ -133,7 +157,10 @@
     <section class="parallax_out part1">
         <div class="parallax wrapper_80">
             <div class="_body">
-                <h2 class="f_600_35_40 white"><a name="consult">Бесплатная<br>консультация&nbsp;специалиста</a></h2>
+                <div class="success">
+                    <img src="img/successfully.png" alt="">
+                </div>
+                <h2 class="f_600_35_40 white form_title">Бесплатная<br>консультация&nbsp;специалиста</h2>
                 <p class="f_600_18_25 white">Мы свяжемся с вами в течение рабочего&nbsp;дня</p>
                 <form id="form1" class="form_phone" action="#">
                     <input id="1" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
@@ -391,7 +418,10 @@
     <section class="parallax_out part2">
         <div class="parallax wrapper_80">
             <div class="_body">
-                <h2 class="f_600_35_40 white">Аренда ферм<br>SignImpress</h2>
+                <div class="success">
+                    <img src="img/successfully.png" alt="">
+                </div>
+                <h2 class="f_600_35_40 white form_title">Аренда ферм<br>SignImpress</h2>
                 <p class="f_600_16_20 white">Мы предлагаем аренду металлических ферм для&nbsp;создания необходимых конструкций для&nbsp;вашего мероприятия.</p>
                 <p class="f_600_16_20 white last">Также мы готовы предоставить эту конструкцию на&nbsp;«тест-драйв» в&nbsp;формате аренды и&nbsp;если вы&nbsp;захотите приобрести конструкцию то&nbsp;стоимость аренды будет учтена в&nbsp;оплату изделия. Аренда доступна только в&nbsp;городах где размещены выставочные залы нашей компании.</p>
                 <form id="form2" class="form_phone" action="#">
@@ -500,7 +530,10 @@
     <section class="parallax_out part3">
         <div class="parallax wrapper_80">
             <div class="_body">
-                <h2 class="f_600_35_40 white">Расчет<br>и визуализация</h2>
+                <div class="success">
+                    <img src="img/successfully.png" alt="">
+                </div>
+                <h2 class="f_600_35_40 white form_title">Расчет<br>и визуализация</h2>
                 <p class="f_600_16_20 white">Для расчета металлической конструкции уточните требуемый размер и&nbsp;назначение (для уличного или&nbsp;внутреннего использования).</p>
                 <p class="f_600_16_20 white last">А для более требовательных заказчиков мы&nbsp;готовы предложить создание визуализации будущей металлической конструкции в&nbsp;3D&nbsp;формате (услуга рассчитывается отдельно). Полную информацию вы&nbsp;можете уточнить у&nbsp;наших менеджеров.</p>
                 <form id="form3" class="form_phone" action="#">
@@ -516,6 +549,12 @@
         <div class="_body">
             <div class="title">
                 <h2 class="f_600_35_40 red">3D визуализация</h2>
+            </div>
+            <div class="video">
+                <div class="soundoff">
+                    <img src="img/off.png" alt="">
+                </div>
+                <video width="100%" autoplay="" loop="" muted="" src="img/ferm.mp4"></video>
             </div>
         </div>
     </section>
@@ -603,6 +642,7 @@
     <script src='js/script.js'></script>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -642,6 +682,23 @@
             }
 
             $(window).on('load resize', windowSize);
+
+            $(".soundoff").click(function () {
+                if( $(this).parent().find("video").prop('muted') ) {
+                    $('.soundoff').html('<img src="img/on.png" alt="" />');
+                    $(this).parent().find("video").prop('muted', false);
+                } else {
+                    $('.soundoff').html('<img src="img/off.png" alt="" />');
+                    $(this).parent().find("video").prop('muted', true);
+                }
+            });
+
+            $('.consult').click(function () {
+                $('.dm-overlay').css('display', 'block');
+            });
+            $('.close').click(function () {
+                $('.dm-overlay').css('display', 'none');
+            });
         });
     </script>
 </body>

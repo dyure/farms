@@ -1,8 +1,11 @@
-"use strict"
+"use strict";
 
 //после полной загрузки документа
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('body').addEventListener('click', e => {
+        $('.input_phone').inputmask({
+            "mask" : "+7 (999) 999-99-99"
+        });
         //id input по которому кликнули
         const clicked = e.target.closest('input');
         const inputID = $(clicked).attr('id');
@@ -14,9 +17,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const formID = 'form' + inputID;
         //создаем реакцию на ввод каждого символа
         const inputPhone = document.getElementById(inputID);
-        inputPhone.addEventListener("input", updateValue);
         //функция подсчета количества введенных символов
-        function updateValue() {
+        inputPhone.oninput = function() {
             if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11) {
                 $(buttonID).addClass('active');
                 $(errorID).removeClass('active');
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 $(errorID).addClass('active');
             }
         }
+        
         const form = document.getElementById(formID);
         //перехватываем нажатие кнопки
         form.addEventListener('submit', formSend);
@@ -44,9 +47,12 @@ document.addEventListener('DOMContentLoaded', function(){
                 if (response.ok){
                     //let result = await response.json();
                     // alert(response.ok);
-                    form.reset();
+                    //form.reset();
                     form.classList.remove('_sending');
-                    $(buttonID).removeClass('active');
+                    //$(buttonID).removeClass('active');
+                    $('.form_phone').addClass('unactive');
+                    $('.success').addClass('active');
+                    $('.form_title').html('Ваша заявка успешно<br>отправлена');
                 } else {
                     //alert ('Ошибка!');
                     form.classList.remove('_sending');
