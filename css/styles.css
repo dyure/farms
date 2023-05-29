@@ -1429,7 +1429,7 @@ html {
 }
 .parallax_out.part1 p,
 .dm-modal p {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
 }
 .parallax_out.part2 p,
 .parallax_out.part3 p {
@@ -1481,6 +1481,15 @@ html {
 }
 /* < 768px */
 @media screen and (max-width: 767px) {
+    .parallax_out.part1 {
+        background-image: url("../img/parallax1_768.png");
+    }
+    .parallax_out.part2 {
+        background-image: url("../img/parallax2_768.png");
+    }
+    .parallax_out.part3 {
+        background-image: url("../img/parallax3_768.png");
+    }
     .parallax_out.part1 ._body,
     .parallax_out.part2 ._body,
     .parallax_out.part3 ._body {
@@ -1501,7 +1510,7 @@ html {
     }
     .parallax_out.part1 p,
     .dm-modal p {
-        margin-bottom: 50px;
+        margin-bottom: 46px;
     }
     .parallax_out.part2 h2,
     .parallax_out.part2 p,
@@ -1513,7 +1522,7 @@ html {
     .parallax_out.part2 h2,
     .parallax_out.part3 h2,
     .dm-modal h2 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .parallax_out.part2 p.last,
     .parallax_out.part3 p.last {
@@ -1522,6 +1531,15 @@ html {
 }
 /* < 575px */
 @media screen and (max-width: 575px) {
+    .parallax_out.part1 {
+        background-image: url("../img/parallax1_768.png");
+    }
+    .parallax_out.part2 {
+        background-image: url("../img/parallax2_768.png");
+    }
+    .parallax_out.part3 {
+        background-image: url("../img/parallax3_768.png");
+    }    
     .parallax_out.part1 ._body,
     .parallax_out.part2 ._body,
     .parallax_out.part3 ._body {
@@ -1549,7 +1567,7 @@ html {
     }
     .parallax_out.part1 p,
     .dm-modal p {
-        margin-bottom: 30px;
+        margin-bottom: 14px;
     }
     .parallax_out.part2 h2,
     .parallax_out.part2 p,
@@ -1591,10 +1609,11 @@ html {
 .input_phone {
     background-color: #282828;
     color: #f6f6f6;
-    width: 273px;
+    width: 309px;
     height: 50px;
     border: none;
     border-bottom: 1px solid #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
@@ -1611,7 +1630,7 @@ html {
 #error_input3,
 #error_input4 {
     display: none;
-    width: 273px;
+    width: 309px;
     height: 26px;
     background-color: #F6F6F6;
     color: #cc0000;
@@ -1628,10 +1647,11 @@ html {
 }
 .input_phone::placeholder {
     color: #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.2px;
 }
 .dm-modal .input_phone::placeholder {
     color: #282828;
@@ -1644,10 +1664,11 @@ html {
     width: 273px;
     height: 50px;
     border: 1px solid #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -1657,10 +1678,11 @@ html {
     width: 273px;
     height: 50px;
     border: 1px solid #282828;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -1752,14 +1774,29 @@ html {
 /* < 1400px */
 @media screen and (max-width: 1399px) {}
 /* < 1200px */
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+    .input_phone {
+        width: 280px;
+        margin-right: 25px;
+    }
+    #error_input1,
+    #error_input2,
+    #error_input3,
+    #error_input4 {
+        width: 280px;
+    }
+}
 /* < 768px */
 @media screen and (max-width: 767px) {
     .input_phone {
         width: 252px;
         font-size: 15px;
         line-height: 20px;
-        margin-right: 16px;
+        margin-right: 30px;
+    }
+    .input_phone::placeholder {
+        font-size: 15px;
+        line-height: 20px;
     }
     #error_input1,
     #error_input2,
@@ -1789,6 +1826,7 @@ html {
 @media screen and (max-width: 575px) {
     .input_phone {
         width: 239px;
+        margin-right: 0;
     }
     #error_input1,
     #error_input2,
