@@ -13,7 +13,6 @@
 }
 a {
     text-decoration: none;
-    color: #282828;
 }
 *:focus {
     outline: 0;
@@ -95,7 +94,7 @@ html {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0;
+    letter-spacing: -0.015em;
 }
 .f_600_14_26 {
     font-style: normal;
@@ -109,7 +108,7 @@ html {
     font-weight: 500;
     font-size: 35px;
     line-height: 48px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05em;
 }
 .f_500_16_25 {
     font-style: normal;
@@ -136,6 +135,11 @@ html {
         font-size: 17px;
         line-height: 20px;
         letter-spacing: 0.2px;
+    }
+    .f_600_16_20 {
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
     }
     .f_500_16_25 {
         font-size: 15px;
@@ -191,9 +195,7 @@ html {
         letter-spacing: 0.2px;
     }
     .f_600_16_20 {
-        font-size: 15px;
-        line-height: 20px;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.065em;
     }
 }
 /* < 575px */
@@ -227,6 +229,10 @@ html {
         font-size: 14px;
         line-height: 25px;
         letter-spacing: 0;
+    }
+    .f_600_16_20 {
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 /**
@@ -465,7 +471,7 @@ html {
         padding: 13px 33px;
     }
     .whatsapp {
-        padding: 0 12px;
+        padding: 0 11px;
     }
 }
 /* < 768px */
@@ -478,12 +484,13 @@ html {
         width: 162px;
         height: 44px;
     }
-    .catalogue,
-    .consult {
+    .catalogue {
         padding: 13px 17px;
         margin-right: 13px;
     }
     .consult {
+        padding: 13px 17px;
+        margin-right: 0;
         background-color: #282828;
         opacity: 0.9;
     }
@@ -560,7 +567,7 @@ html {
     font-weight: 600;
     font-size: 26px;
     line-height: 36px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.05em;
 }
 /* < 1400px */
 @media screen and (max-width: 1399px) {
@@ -1022,6 +1029,7 @@ html {
 }
 .line_12_use h3 {
     margin-bottom: 30px;
+    margin-top: 6px;
 }
 .line12_col_use .text {
     padding-top: 20px;
@@ -1115,6 +1123,7 @@ html {
         display: block;
         width: 714px;
         height: 276px;
+        background-color: #ffffff;
     }
     swiper-container {
         width: 100%;
@@ -1320,6 +1329,7 @@ html {
 }
 .line_22_use h3 {
     margin-bottom: 30px;
+    margin-top: 6px;
 }
 .line_22_use .line22_col .img {
     border-bottom: none;
@@ -1466,6 +1476,9 @@ html {
 }
 /* < 1200px */
 @media screen and (max-width: 1199px) {
+    .parallax {
+        opacity: 0.85;
+    }
     .parallax_out.part1 {
         background-image: url("../img/parallax1_1200.png");
     }
@@ -1498,6 +1511,9 @@ html {
 }
 /* < 768px */
 @media screen and (max-width: 767px) {
+    .parallax {
+        opacity: 0.9;
+    }
     .parallax_out.part1 {
         background-image: url("../img/parallax1_768.png");
     }
@@ -1914,8 +1930,10 @@ html {
     text-align: right!important;
     position: absolute;
     right: -3px;
-    bottom: 80px;
-    z-index: -1;
+    bottom: 5px;
+    background-color: #ffffff;
+    height: 100px;
+    width: 50%;
 }
 .owl-dot span {
     background-color: #f1f1f1!important;
@@ -1928,7 +1946,7 @@ html {
     opacity: 0.2;
 }
 button.owl-dot {
-    margin-right: -8px!important;
+    margin-right: -7px!important;
 }
 .slide {
     width: 644px;
@@ -1970,11 +1988,36 @@ button.owl-dot {
         left: -6px;
         bottom: -40px;
     }
+    .portfolio h2 {
+        margin-bottom: 40px;
+    }
+    .owl-carousel p.first {
+        margin-top: 20px;
+    }
 }
 /* < 768px */
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .slide {
+        width: 440px;
+        height: 314px;
+    }
+    .portfolio h2 {
+        margin-bottom: 30px;
+    }
+}
 /* < 575px */
-@media screen and (max-width: 575px) {}
+@media screen and (max-width: 575px) {
+    .slide {
+        width: 300px;
+        height: 213px;
+    }
+    .portfolio h2 {
+        margin-bottom: 25px;
+    }
+    .owl-carousel p.first {
+        margin-top: 17px;
+    }
+}
 /**
 *
 * visual section
@@ -2057,6 +2100,10 @@ button.owl-dot {
     width: 880px;
     padding-bottom: 40px;
     padding-left: 22px;
+}
+.a_faq {
+    color: #282828;
+    font-weight: bold;
 }
 /* < 1400px */
 @media screen and (max-width: 1399px) {
