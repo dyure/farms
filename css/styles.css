@@ -283,9 +283,6 @@ html {
     ._body {
         max-width: 1176px;
     }
-    .wrapper_80 {
-        margin-bottom: 60px;
-    }
     .wrapper_70 {
         margin-bottom: 55px;
     }
@@ -713,7 +710,7 @@ html {
 .use_table_rightcol p:last-child {
     margin-bottom: 0;
 }
-/* < 1400px */
+/* < 1399px */
 @media screen and (max-width: 1399px) {
     .use_table_leftcol {
         width: 362px;
@@ -731,7 +728,7 @@ html {
         margin-bottom: 39px;
     }
 }
-/* < 1200px */
+/* < 1199px */
 @media screen and (max-width: 1199px) {
     .table {
         flex-direction: column;
@@ -744,7 +741,7 @@ html {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 0;
         column-gap: 64px;
-        margin-bottom: 15px;
+        margin-bottom: 22px;
     }
     .ul_items .item_1,
     .ul_items .item_2,
@@ -753,7 +750,7 @@ html {
     .ul_items .item_5,
     .ul_items .item_6 {
         padding-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 28px;
     }
     .use_table_leftcol {
         width: 714px;
@@ -764,7 +761,7 @@ html {
         padding-top: 0;
     }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {
     .ul_items {
         grid-template-areas: "item_1"
@@ -945,7 +942,7 @@ html {
 .line12_col img {
     width: 350px;
     height: 170px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 .line12_col .text {
     width: 390px;
@@ -955,10 +952,10 @@ html {
 .line12_col .text .first {
     margin-bottom: 12px;
 }
-/* < 1400px */
+/* < 1399px */
 @media screen and (max-width: 1399px) {
     .items_2 {
-        row-gap: 35px;
+        row-gap: 38px;
         column-gap: 30px;
     }
     .line12_col .text {
@@ -968,7 +965,7 @@ html {
         margin-bottom: 5px;
     }
 }
-/* < 1200px */
+/* < 1199px */
 @media screen and (max-width: 1199px) {
     .items_2 {
         grid-template-areas: "item_1 item_2"
@@ -976,7 +973,7 @@ html {
                              "item_5 item_6"; 
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 42px;
+        row-gap: 44px;
         column-gap: 74px;
     }
     .line_12 h2 {
@@ -985,13 +982,17 @@ html {
     .line12_col img {
         width: 319px;
         height: 155px;
+        margin-bottom: 5px;
     }
     .line12_col .text {
         width: 320px;
-        padding-top: 11px;
+        padding-top: 13px;
+    }
+    .line12_col .text .first {
+        margin-bottom: 12px;
     }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {
     .items_2 {
         row-gap: 36px;
@@ -1252,19 +1253,20 @@ html {
 .line22_col .text .first {
     margin-bottom: 13px;
 }
-/* < 1400px */
+/* < 1399px */
 @media screen and (max-width: 1399px) {
     .items_4 {
+        row-gap: 39px;
         column-gap: 36px;
     }
     .line22_col .text {
         width: 260px;
     }
     .line22_col .text .first {
-        margin-bottom: 4px;
+        margin-bottom: 7px;
     }
 }
-/* < 1200px */
+/* < 1199px */
 @media screen and (max-width: 1199px) {
     .items_4 {
         grid-template-areas: "item_1 item_2 item_3"
@@ -1290,7 +1292,7 @@ html {
         margin-bottom: 11px;
     }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {
     .items_4 {
         grid-template-areas: "item_1 item_2"
@@ -1777,7 +1779,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(40, 40, 40, 0.95);
     display: none;
     overflow: auto;
     width: 100%;
@@ -1946,8 +1948,8 @@ html {
 .owl-dots {
     text-align: right!important;
     position: absolute;
-    right: -3px;
-    bottom: 5px;
+    right: 0;
+    bottom: 4px;
     background-color: #ffffff;
     height: 100px;
     width: 50%;
@@ -1966,8 +1968,8 @@ button.owl-dot {
     margin-right: -7px!important;
 }
 .slide {
-    width: 644px;
-    height: 466px;
+    width: 644px!important;
+    height: 466px!important;
 }
 .owl-carousel p.first {
     margin-top: 30px;
@@ -1975,17 +1977,24 @@ button.owl-dot {
 .owl-carousel p.second {
     margin-top: 15px;
 }
-/* < 1400px */
+/* < 1399px */
 @media screen and (max-width: 1399px) {
     .slide {
-        width: 558px;
-        height: 399px;
+        width: 558px!important;
+        height: 399px!important;
     }    
     .owl-prev, .owl-next {
         top: 175px;
-    }}
-/* < 1200px */
+    }
+    .owl-dots {
+        bottom: -6px;
+    }
+}
+/* < 1199px */
 @media screen and (max-width: 1199px) {
+    .owl-carousel {
+        margin-bottom: 66px;
+    }
     .owl_items {
         grid-template-areas: "item_1"
                              "item_2"; 
@@ -1994,16 +2003,21 @@ button.owl-dot {
         row-gap: 0;
     }
     .slide {
-        width: 466px;
-        height: 332px;
+        width: 466px!important;
+        height: 332px!important;
+    }
+    .owl-stage {
+        padding-left: 0!important;
     }
     .owl-prev, .owl-next {
         top: 307px;
     }
     .owl-dots {
+        width: 100%;
         text-align: left!important;
         left: -6px;
-        bottom: -40px;
+        bottom: -146px;
+        background-color: unset;
     }
     .portfolio h2 {
         margin-bottom: 40px;
@@ -2012,7 +2026,7 @@ button.owl-dot {
         margin-top: 20px;
     }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {
     .slide {
         width: 440px;
@@ -2221,7 +2235,7 @@ button.owl-dot {
     margin-top: 59px;
     margin-bottom: 20px;
 }
-/* < 1400px */
+/* < 1399px */
 @media screen and (max-width: 1399px) {
     .items_5 .item_1,
     .items_5 .item_2,
@@ -2230,7 +2244,7 @@ button.owl-dot {
         padding-left: 25px;
     }
 }
-/* < 1200px */
+/* < 1199px */
 @media screen and (max-width: 1199px) {
     .footer {
         background-image: url('../img/footer_1200.png');
@@ -2241,14 +2255,18 @@ button.owl-dot {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         column-gap: 124px;
-        row-gap: 40px;
+        row-gap: 43px;
         margin-bottom: 40px;
     }
     .p1, .p2 {
         margin-bottom: 10px;
     }
+    .agreed {
+        margin-top: 44px;
+        margin-bottom: 10px;
+    }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {
     .footer {
         background-image: url('../img/footer_767.png');
