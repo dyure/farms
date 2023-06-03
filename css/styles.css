@@ -230,13 +230,13 @@ html {
     .f_600_18_25_h3 {
         font-size: 17px;
         line-height: 20px;
-        letter-spacing: 0.2px;
+        letter-spacing: 0;
     }
     .f_600_18_25_i {
         font-size: 15px;
     }
     .f_400_18_20 {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 25px;
         letter-spacing: 0;
     }
@@ -915,7 +915,7 @@ html {
 						 "item_4 item_5 item_6"; 
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(3, 1fr);
-    row-gap: 38px;
+    row-gap: 25px;
     column-gap: 78px;
 }
 .items_2 .item_1 {
@@ -937,7 +937,7 @@ html {
 	grid-area: item_6;
 }
 .line_12 h2 {
-    margin-bottom: 45px;
+    margin-bottom: 32px;
 }
 .line12_col img {
     width: 350px;
@@ -950,19 +950,25 @@ html {
     padding-top: 15px;
 }
 .line12_col .text .first {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 /* < 1399px */
 @media screen and (max-width: 1399px) {
     .items_2 {
-        row-gap: 38px;
+        row-gap: 25px;
         column-gap: 30px;
+    }
+    .line_12 h2 {
+        margin-bottom: 34px;
+    }
+    .line12_col img {
+        margin-bottom: 12px;
     }
     .line12_col .text {
         width: 360px;
     }
     .line12_col .text .first {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
 }
 /* < 1199px */
@@ -973,11 +979,11 @@ html {
                              "item_5 item_6"; 
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 44px;
+        row-gap: 43px;
         column-gap: 74px;
     }
     .line_12 h2 {
-        margin-bottom: 37px;
+        margin-bottom: 29px;
     }
     .line12_col img {
         width: 319px;
@@ -986,20 +992,20 @@ html {
     }
     .line12_col .text {
         width: 320px;
-        padding-top: 13px;
+        padding-top: 15px;
     }
     .line12_col .text .first {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
 }
 /* < 767px */
 @media screen and (max-width: 767px) {
     .items_2 {
-        row-gap: 36px;
-        column-gap: 36px;
+        row-gap: 33px;
+        column-gap: 31px;
     }
     .line_12 h2 {
-        margin-bottom: 35px;
+        margin-bottom: 29px;
     }
     .line12_col img {
         width: 247px;
@@ -1016,11 +1022,11 @@ html {
 /* < 575px */
 @media screen and (max-width: 575px) {
     .items_2 {
-        row-gap: 28px;
-        column-gap: 30px;
+        row-gap: 22px;
+        column-gap: 25px;
     }
     .line_12 h2 {
-        margin-bottom: 33px;
+        margin-bottom: 29px;
     }
     .line12_col img {
         width: 150px;
@@ -1210,7 +1216,7 @@ html {
 						 "item_5 item_6 item_7 item_8"; 
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(3, 1fr);
-    row-gap: 33px;
+    row-gap: 21px;
     column-gap: 82px;
 }
 .items_4 .item_1 {
@@ -1238,7 +1244,7 @@ html {
 	grid-area: item_8;
 }
 .line_22 h2 {
-    margin-bottom: 44px;
+    margin-bottom: 34px;
 }
 .line22_col .text {
     width: 270px;
@@ -1248,15 +1254,15 @@ html {
 .line22_col img {
     width: 260px;
     height: 120px;
-    padding-bottom: 15px;
+    margin-bottom: 13px;
 }
 .line22_col .text .first {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
 }
 /* < 1399px */
 @media screen and (max-width: 1399px) {
     .items_4 {
-        row-gap: 39px;
+        row-gap: 25px;
         column-gap: 36px;
     }
     .line22_col .text {
@@ -1274,16 +1280,17 @@ html {
                              "item_7 item_8 item_9"; 
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 20px;
+        row-gap: 19px;
         column-gap: 45px;
+        margin-bottom: -20px;
     }
     .line_22 h2 {
-        margin-bottom: 35px;
+        margin-bottom: 34px;
     }
     .line22_col img {
         width: 207px;
         height: 96px;
-        padding-bottom: 11px;
+        margin-bottom: 1px;
     }
     .line22_col .text {
         width: 207px;
@@ -1301,17 +1308,23 @@ html {
                              "item_7 item_8"; 
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 17px;
-        column-gap: 38px;
+        row-gap: 11px;
+        column-gap: 31px;
+    }
+    .line_22 h2 {
+        margin-bottom: 29px;
     }
     .line22_col img {
         width: 246px;
         height: 114px;
-        padding-bottom: 11px;
+        margin-bottom: 6px;
     }
     .line22_col .text {
         width: 248px;
-        padding-top: 11px;
+        padding-top: 10px;
+    }
+    .line22_col .text .first {
+        margin-bottom: 11px;
     }
 }
 /* < 575px */
@@ -1319,20 +1332,22 @@ html {
     .items_4 {
         row-gap: 0;
         column-gap: 30px;
+        margin-bottom: -23px;
     }
     .line_22 h2 {
-        margin-bottom: 33px;
+        margin-bottom: 29px;
     }
     .line22_col img {
         width: 152px;
         height: 70px;
+        margin-bottom: 4px;
     }
     .line22_col .text {
         width: 152px;
         padding-top: 8px;
     }
     .line22_col .text .first {
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
 }
 /**
@@ -1346,7 +1361,7 @@ html {
 }
 .line_22_use h3 {
     margin-bottom: 30px;
-    margin-top: 6px;
+    margin-top: 18px;
 }
 .line_22_use .line22_col .img {
     border-bottom: none;
@@ -1377,7 +1392,7 @@ html {
 .line_22_use .img3:hover {
     background-position: -390px 0;
 }
-/* < 1400px */
+/* < 1299px */
 @media screen and (max-width: 1399px) {
     .items_3 {
         column-gap: 30px;
@@ -1393,19 +1408,29 @@ html {
     .line_22_use .img3:hover {
         background-position: -362px 0;
     }
+    .line_22_use h3 {
+        margin-top: 14px;
+    }
 }
-/* < 1200px */
+/* < 1199px */
 @media screen and (max-width: 1199px) {
+    .line_22_use h3 {
+        margin-top: 3px;
+    }
     .line_22_use .img1,
     .line_22_use .img2,
     .line_22_use .img3 {
         display: none;
     }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {}
 /* < 575px */
-@media screen and (max-width: 575px) {}
+@media screen and (max-width: 575px) {
+    .line_22_use h3 {
+        margin-top: -9px;
+    }
+}
 /**
 *
 * parallax section
