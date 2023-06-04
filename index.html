@@ -73,7 +73,10 @@
     <section class="banner wrapper_80">
         <div class="_body">
             <div class="banner_title">
-                <h1 class="f_700_60_73">Металлические<br>фермы</h2>
+                <h2 class="f_700_60_73">Металлические<br>фермы</h2>
+            </div>
+            <div class="banner_subtitle">
+                <h3 class="f_600_26_37">для подвесных и&nbsp;наземных конструкций</h3>
             </div>
         </div>
     </section>
@@ -442,6 +445,19 @@
         </div>
     </section>
 
+    <!-- <div class="owl_items">
+                    <div class="item_1">
+                        <img class="slide" src="img/portfolio/p_2_left.png" alt="">
+                    </div>
+                    <div class="item_2">
+                        <img class="slide" src="img/portfolio/p_2_right.png" alt="">
+                    </div>
+                    <div class="owl_text">
+                        <p class="f_600_18_25 first">Пресстена для конференции, 3240*3000мм</p>
+                        <p class="f_400_18_20 second">Line 12*150 - 8шт., Line&nbsp;12*100&nbsp;-&nbsp;2шт.</p>    
+                    </div>
+                </div> -->
+
     <section class="portfolio wrapper_80">
         <div class="_body">
             <div class="title">
@@ -460,18 +476,7 @@
                         <p class="f_400_18_20 second">Line 12*12*200 - 24шт.</p>    
                     </div>
                 </div>
-                <div class="owl_items">
-                    <div class="item_1">
-                        <img class="slide" src="img/portfolio/p_2_left.png" alt="">
-                    </div>
-                    <div class="item_2">
-                        <img class="slide" src="img/portfolio/p_2_right.png" alt="">
-                    </div>
-                    <div class="owl_text">
-                        <p class="f_600_18_25 first">Пресстена для конференции, 3240*3000мм</p>
-                        <p class="f_400_18_20 second">Line 12*150 - 8шт., Line&nbsp;12*100&nbsp;-&nbsp;2шт.</p>    
-                    </div>
-                </div>
+                
                 <div class="owl_items">
                     <div class="item_1">
                         <img class="slide" src="img/portfolio/p_3_left.png" alt="">
@@ -850,26 +855,25 @@
                 slideBy: 1,
                 loop: true,
                 responsive : {
-                375 : {
+                0 : {
                     items: 1,
                     nav: false,
                     stagePadding: 116,
                     margin: 11,
-                    autoHeight: true,
                 },
                 575 : {
-                    items: 1,
+                    items: 2,
+                    center: true,
+                    loop:false,
                     nav: false,
-                    stagePadding: 116,
-                    margin: 11,
-                    autoHeight: true,
+                    //stagePadding: 100,
+                    margin: 150,
                 },
                 768 : { //ok
                     items: 1,
                     stagePadding: 116,
                     nav: false,
                     margin: 11,
-                    autoHeight: true,
                 },
                 1200 : { //ok
                     margin: 30,

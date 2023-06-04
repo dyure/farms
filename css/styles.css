@@ -55,12 +55,12 @@ html {
     line-height: 40px;
     letter-spacing: 0.6px;
 }
-.f_600_26_36 {
+.f_600_26_37 {
     font-style: normal;
     font-weight: 600;
     font-size: 26px;
-    line-height: 36px;
-    letter-spacing: 0.7px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
 }
 .f_600_18_25 {
     font-style: normal;
@@ -176,6 +176,10 @@ html {
         line-height: 58px;
         letter-spacing: 1.4px;
     }
+    .f_600_35_40 {
+        font-size: 26px;
+        line-height: 37px;
+    }
     .f_600_18_25 {
         font-size: 16px;
         line-height: 20px;
@@ -190,10 +194,6 @@ html {
     .f_600_18_25_i {
         font-size: 16px;
         line-height: 20px;
-    }
-    .f_600_35_40 {
-        font-size: 26px;
-        line-height: 37px;
     }
     .f_600_18_25 {
         font-size: 15px;
@@ -220,7 +220,7 @@ html {
         line-height: 30px;
         letter-spacing: 0.1px;
     }
-    .f_600_26_36 {
+    .f_600_26_37 {
         font-size: 18px;
         line-height: 25px;
     }
@@ -520,6 +520,7 @@ html {
     }
     .header ._body {
         padding: 0;
+        max-width: 100%;
     }
     .header_body {
         justify-content: space-between;
@@ -562,24 +563,13 @@ html {
 }
 .banner_title {
     margin-top: 190px;
-    position: relative;
+    margin-bottom: 25px;
+    /* position: relative; */
 }
-.banner_title::after {
-    content: 'для подвесных и наземных конструкций';
-    white-space: pre;
-    position: absolute;
-    display: block;
-    top: 174px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 36px;
-    letter-spacing: 0.05em;
+.banner_subtitle {
+    width: 598px;
 }
-/* < 1400px */
+/* < 1399px */
 @media screen and (max-width: 1399px) {
     .banner {
         background-image: url('../img/banner_top_1399.png');
@@ -592,7 +582,7 @@ html {
         top: 168px;
     }
 }
-/* < 1200px */
+/* < 1199px */
 @media screen and (max-width: 1199px) {
     .banner {
         background-image: url('../img/banner_top_1200.png');
@@ -602,21 +592,30 @@ html {
     .banner_title {
         color: #F6F6F6;
         margin-top: 130px;
+        margin-bottom: 20px;
+    }
+    .banner_subtitle {
+        color: #F6F6F6;
     }
 }
-/* < 768px */
+/* < 767px */
 @media screen and (max-width: 767px) {
     .banner {
         background-image: url('../img/banner_top_768.png');
         height: 561px;
     }
-    .banner_title {
+    .banner ._body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin-top: 190px;    
     }
-    .banner_title::after {
-        content: 'для подвесных и наземных\0aконструкций';
-        top: 140px;
+    .banner_title {
+        margin-top: 190px;
+        margin-bottom: 25px;
+    }
+    .banner_subtitle {
+        width: 476px;
     }
 }
 /* < 575px */
@@ -629,11 +628,8 @@ html {
         margin-top: 150px;
         margin-bottom: 13px;
     }
-    .banner_title::after {
-        content: 'для подвесных\0aи наземных конструкций';
-        top: 90px;
-        font-size: 14px;
-        line-height: 17px;
+    .banner_subtitle {
+        width: 264px;
     }
 }
 /**
@@ -1189,6 +1185,9 @@ html {
 }
 /* < 575px */
 @media screen and (max-width: 575px) {
+    .line_12_use ._body {
+        padding-right: 0;
+    }
     .items_3 {
         row-gap: 35px;
         margin-bottom: 40px;
@@ -1427,6 +1426,9 @@ html {
 @media screen and (max-width: 767px) {}
 /* < 575px */
 @media screen and (max-width: 575px) {
+    .line_22_use ._body {
+        padding-right: 0;
+    }
     .line_22_use h3 {
         margin-top: -9px;
     }
@@ -2018,7 +2020,7 @@ button.owl-dot {
 /* < 1199px */
 @media screen and (max-width: 1199px) {
     .owl-carousel {
-        margin-bottom: 66px;
+        margin-bottom: 37px;
     }
     .owl_items {
         grid-template-areas: "item_1"
@@ -2041,7 +2043,7 @@ button.owl-dot {
         width: 100%;
         text-align: left!important;
         left: -6px;
-        bottom: -146px;
+        bottom: -120px;
         background-color: unset;
     }
     .portfolio h2 {
@@ -2053,9 +2055,22 @@ button.owl-dot {
 }
 /* < 767px */
 @media screen and (max-width: 767px) {
+    .portfolio.wrapper_80 {
+        display: block;
+    }
+    .portfolio ._body {
+        padding: 0;
+        max-width: 100%;
+    }
+    /* .owl-stage {
+        padding-left: 100px!important;
+    } */
+    .owl-item.center {
+        margin-left: -118px;
+    }
     .slide {
-        width: 440px;
-        height: 314px;
+        width: 440px!important;
+        height: 314px!important;
     }
     .portfolio h2 {
         margin-bottom: 30px;
