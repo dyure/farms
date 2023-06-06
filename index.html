@@ -42,9 +42,9 @@
         </div>
     </div>
 
-    <section class="header wrapper_80">
+    <section class="header wrapper_0">
         <div class="_body">
-            <div class="header_body">
+            <div id="header_id" class="header_body">
                 <div class="logo">
                     <a href="/">
                         <img src="img/logo.png" alt="">
@@ -127,7 +127,7 @@
                         <img src="img/assortment.png" alt="">
                     </div>
                     <div class="text">
-                        <p class="f_600_18_25_adv">Разнообразие форм<br>и&nbsp;размеров</p>
+                        <p class="f_600_18_25_adv">Разнообразие форм и&nbsp;размеров</p>
                     </div>
                 </div>
                 <div class="advantage_table_row item_3">
@@ -445,22 +445,9 @@
         </div>
     </section>
 
-    <!-- <div class="owl_items">
-                    <div class="item_1">
-                        <img class="slide" src="img/portfolio/p_2_left.png" alt="">
-                    </div>
-                    <div class="item_2">
-                        <img class="slide" src="img/portfolio/p_2_right.png" alt="">
-                    </div>
-                    <div class="owl_text">
-                        <p class="f_600_18_25 first">Пресстена для конференции, 3240*3000мм</p>
-                        <p class="f_400_18_20 second">Line 12*150 - 8шт., Line&nbsp;12*100&nbsp;-&nbsp;2шт.</p>    
-                    </div>
-                </div> -->
-
     <section class="portfolio wrapper_80">
         <div class="_body">
-            <div class="title">
+            <div id="portfolio_title" class="title">
                 <h2 class="f_600_35_40 red"><a name="portfolio">Портфолио</a></h2>
             </div>
             <div class="owl-carousel owl-theme">
@@ -476,7 +463,18 @@
                         <p class="f_400_18_20 second">Line 12*12*200 - 24шт.</p>    
                     </div>
                 </div>
-                
+                <div class="owl_items">
+                    <div class="item_1">
+                        <img class="slide" src="img/portfolio/p_2_left.png" alt="">
+                    </div>
+                    <div class="item_2">
+                        <img class="slide" src="img/portfolio/p_2_right.png" alt="">
+                    </div>
+                    <div class="owl_text">
+                        <p class="f_600_18_25 first">Пресстена для конференции, 3240*3000мм</p>
+                        <p class="f_400_18_20 second">Line 12*150 - 8шт., Line&nbsp;12*100&nbsp;-&nbsp;2шт.</p>    
+                    </div>
+                </div>
                 <div class="owl_items">
                     <div class="item_1">
                         <img class="slide" src="img/portfolio/p_3_left.png" alt="">
@@ -798,7 +796,7 @@
                 <div class="answ">
                     <p class="f_400_18_20">Да, нам необходимы примерные размеры вашего запроса. Мы&nbsp;нарисуем конструкцию и&nbsp;отправим вам фото для&nbsp;согласования.</p>
                 </div>
-                <div class="quest">
+                <div class="quest last">
                     <p class="f_600_18_25">Как получить прайс на металлические конструкции?</p>
                 </div>
                 <div class="answ">
@@ -816,22 +814,22 @@
             <div class="items_5">
                 <div class="item_1">
                     <p class="f_600_18_25_adv white p1">Красноярск</p>
-                    <p class="f_500_16_25 white p2">ул. Березина, д. 3А,<br>пом. №32</p>
+                    <p class="f_500_16_25 white p2">ул. Березина, д.&nbsp;3А,<br>пом.&nbsp;№&nbsp;32</p>
                     <p class="f_600_18_25_adv white p3">+7 (962) 070-10-10</p>
                 </div>
                 <div class="item_2">
-                    <p class="f_600_18_25_adv white p1">Москва</p>
-                    <p class="f_500_16_25 white p2">Московская область,<br>Одинцово, ул. Северная 51</p>
+                    <p class="f_600_18_25_adv white p1">Московская обл.</p>
+                    <p class="f_500_16_25 white p2">Одинцово,<br>ул.&nbsp;Северная,&nbsp;51</p>
                     <p class="f_600_18_25_adv white p3">+7 (962) 070-10-30</p>
                 </div>
                 <div class="item_3">
                     <p class="f_600_18_25_adv white p1">Кемерово</p>
-                    <p class="f_500_16_25 white p2">пр. Ленина, 59<br>корпус 1</p>
+                    <p class="f_500_16_25 white p2">пр. Ленина,<br>59 корпус&nbsp;1</p>
                     <p class="f_600_18_25_adv white p3">+7 (923) 567–19–69</p>
                 </div>
                 <div class="item_4">
                     <p class="f_600_18_25_adv white p1">Новосибирск</p>
-                    <p class="f_500_16_25 white p2">ул. Ельцовка 1-я,<br>1 (территория БЦ)</p>
+                    <p class="f_500_16_25 white p2">ул. Ельцовка 1-я,&nbsp;1<br>(территория&nbsp;БЦ)</p>
                     <p class="f_600_18_25_adv white p3">+7 (965) 900-10-10</p>
                 </div>
             </div>
@@ -845,7 +843,7 @@
     <script src="js/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.owl-carousel').owlCarousel({
                 items: 1,
                 nav: true,
@@ -854,31 +852,33 @@
                 rewind: false,
                 slideBy: 1,
                 loop: true,
-                responsive : {
-                0 : {
-                    items: 1,
-                    nav: false,
-                    stagePadding: 116,
-                    margin: 11,
-                },
-                575 : {
-                    items: 2,
-                    center: true,
-                    loop:false,
-                    nav: false,
-                    //stagePadding: 100,
-                    margin: 150,
-                },
-                768 : { //ok
-                    items: 1,
-                    stagePadding: 116,
-                    nav: false,
-                    margin: 11,
-                },
-                1200 : { //ok
-                    margin: 30,
-                }
-            }
+                // responsive: {
+                //     0 : {
+                //         items: 1,
+                //         center: true,
+                //         loop:false,
+                //         nav: false,
+                //         margin: 15,
+                //         stagePadding: 60,
+                //     },
+                //     575 : { //ok
+                //         items: 1,
+                //         center: true,
+                //         loop:false,
+                //         nav: false,
+                //         margin: 30,
+                //         stagePadding: 150,
+                //     },
+                //     768 : { //ok
+                //         items: 1,
+                //         stagePadding: 116,
+                //         nav: false,
+                //         margin: 11,
+                //     },
+                //     1200 : { //ok
+                //         margin: 30,
+                //     }
+                // }
             });
 
             $('.quest').click(function () {
