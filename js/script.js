@@ -52,7 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 body: formData
             });
-            
+
+            let curWidth = $(window).width();
+            if (curWidth > '1199') curWidth = 370;
+            if (curWidth <= '1199' && curWidth > '767') curWidth = 350;
+            if (curWidth <= '767' && curWidth > '575') curWidth = 294;
+            if (curWidth < '575') curWidth = 375;            
             if (response.ok){
                 $('#form' + ID).removeClass('_sending');
                 if (ID == 1 || ID == 4) {
@@ -66,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     $('#form2').addClass('unactive');
                     $('#form3').addClass('unactive');
                     $('#form_title' + ID).html('Ваша заявка успешно<br>отправлена');
+                    $('#form_text_first' + ID).html('Мы свяжемся с вами в течение рабочего&nbsp;дня');
+                    $('#form_text_last' + ID).css('display', 'none');
+                    $('#parallax_out' + ID).css('height', curWidth + 'px');
                 }
             } else {
                 $('#form' + ID).removeClass('_sending');
