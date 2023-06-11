@@ -157,7 +157,7 @@ html {
     .f_600_18_25_i {
         font-size: 16px;
         line-height: 20px;
-        letter-spacing: 0.2px;
+        letter-spacing: 0;
     }
     .f_500_35_48 {
         font-size: 35px;
@@ -213,6 +213,7 @@ html {
     .f_400_18_20 {
         font-size: 15px;
         line-height: 25px;
+        letter-spacing: 0;
     }
 
 }
@@ -255,6 +256,13 @@ html {
     .f_400_13_25 {
         font-size: 13px;
         line-height: 15px;
+    }
+}
+/* < 374px */
+@media screen and (max-width: 374px) {
+    .f_600_18_25_h3 {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 /**
@@ -558,6 +566,12 @@ html {
         padding-top: 16px;
         padding-right: 20px;
         margin-right: 0;
+    }
+}
+/* < 374px */
+@media screen and (max-width: 374px) {
+    .logo {
+        padding-left: 0;
     }
 }
 /**
@@ -1023,7 +1037,6 @@ html {
 @media screen and (max-width: 575px) {
     .items_2 {
         row-gap: 22px;
-        column-gap: 25px;
     }
     .line_12 h2 {
         margin-bottom: 29px;
@@ -1034,6 +1047,34 @@ html {
     }
     .line12_col .text {
         width: 152px;
+        padding-top: 8px;
+    }
+    .line12_col .text .first {
+        margin-bottom: 4px;
+    }
+}
+/* < 374px */
+@media screen and (max-width: 374px) {
+    .items_2 {
+        grid-template-areas: "item_1"
+                             "item_2"
+                             "item_3"
+                             "item_4"  
+                             "item_5"
+                             "item_6"; 
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 22px;
+    }
+    .line_12 h2 {
+        margin-bottom: 29px;
+    }
+    .line12_col img {
+        width: 150px;
+        height: 73px;
+    }
+    .line12_col .text {
+        width: 210px;
         padding-top: 8px;
     }
     .line12_col .text .first {
@@ -1197,6 +1238,9 @@ html {
         margin-top: -9px;
         margin-bottom: 25px;
     }
+    .line12_col_use .text {
+        width: 95%;
+    }
     .items_3 {
         row-gap: 35px;
         margin-bottom: 40px;
@@ -1338,8 +1382,6 @@ html {
 /* < 575px */
 @media screen and (max-width: 575px) {
     .items_4 {
-        row-gap: 0;
-        column-gap: 30px;
         margin-bottom: -23px;
     }
     .line_22 h2 {
@@ -1352,6 +1394,38 @@ html {
     }
     .line22_col .text {
         width: 152px;
+        padding-top: 8px;
+    }
+    .line22_col .text .first {
+        margin-bottom: 3px;
+    }
+}
+/* < 374px */
+@media screen and (max-width: 374px) {
+    .items_4 {
+        grid-template-areas: "item_1"
+                             "item_2"
+                             "item_3"
+                             "item_4"
+                             "item_5"
+                             "item_6"
+                             "item_7"
+                             "item_8"; 
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 0;
+        margin-bottom: -23px;
+    }
+    .line_22 h2 {
+        margin-bottom: 29px;
+    }
+    .line22_col img {
+        width: 152px;
+        height: 70px;
+        margin-bottom: 4px;
+    }
+    .line22_col .text {
+        width: 210px;
         padding-top: 8px;
     }
     .line22_col .text .first {
@@ -1646,7 +1720,7 @@ html {
     .parallax_out.part2 ._body,
     .parallax_out.part3 ._body {
         /* height: 547px; */
-        height: calc(547px + (516 - 547) * ((100vw - 375px) / (575 - 375)));;
+        height: calc(619px + (499 - 619) * ((100vw - 320px) / (575 - 320)));;
     }
     .parallax_out.part1 h2,
     .parallax_out.part1 p {
@@ -1664,6 +1738,7 @@ html {
     .parallax_out.part1 p,
     .dm-modal p {
         margin-bottom: 14px;
+        width: 300px;
     }
     .parallax_out.part2 h2,
     .parallax_out.part2 p,
@@ -1937,7 +2012,7 @@ html {
         height: 55px;
     }
     .dm-modal {
-        padding: 73px 20px 73px 41px;
+        padding: 73px 20px 73px 40px;
         width: 534px;
         height: 350px;
     }
@@ -1974,7 +2049,7 @@ html {
     }
     .dm-modal {
         padding: 50px 30px 55px 30px;
-        width: 100%;
+        width: 355px;
         height: 402px;
     }
     .dm-cell {
@@ -1987,6 +2062,12 @@ html {
     .close svg {
         width: 35px;
         height: 35px;
+    }
+}
+/* < 374px */
+@media screen and (max-width: 374px) {
+    .dm-modal {
+        width: 300px;
     }
 }
 /**
