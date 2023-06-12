@@ -130,6 +130,13 @@ html {
     line-height: 20px;
     letter-spacing: 0.03em;
 }
+.f_400_18_20_cover {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+}
 .f_400_13_25 {
     font-style: normal;
     font-weight: 400;
@@ -144,6 +151,10 @@ html {
     }
     .f_600_16_20 {
         font-size: 15px;
+        line-height: 20px;
+    }
+    .f_400_18_20_cover {
+        font-size: 17px;
         line-height: 20px;
     }
 }
@@ -165,6 +176,10 @@ html {
     }
     .f_400_18_20 {
         font-size: 17px;
+        line-height: 20px;
+    }
+    .f_400_18_20_cover {
+        font-size: 16px;
         line-height: 20px;
     }
 }
@@ -215,7 +230,10 @@ html {
         line-height: 25px;
         letter-spacing: 0;
     }
-
+    .f_400_18_20_cover {
+        font-size: 15px;
+        line-height: 20px;
+    }
 }
 /* < 575px */
 @media screen and (max-width: 575px) {
@@ -252,6 +270,11 @@ html {
     .f_500_35_48 {
         font-size: 22px;
         line-height: 30px;
+    }
+    .f_400_18_20_cover {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0;
     }
     .f_400_13_25 {
         font-size: 13px;
@@ -1036,7 +1059,7 @@ html {
 /* < 575px */
 @media screen and (max-width: 575px) {
     .items_2 {
-        row-gap: 22px;
+        row-gap: 15px;
     }
     .line_12 h2 {
         margin-bottom: 29px;
@@ -1064,7 +1087,7 @@ html {
                              "item_6"; 
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(1, 1fr);
-        row-gap: 22px;
+        /* row-gap: 22px; */
     }
     .line_12 h2 {
         margin-bottom: 29px;
@@ -1383,6 +1406,7 @@ html {
 @media screen and (max-width: 575px) {
     .items_4 {
         margin-bottom: -23px;
+        row-gap: 0;
     }
     .line_22 h2 {
         margin-bottom: 29px;
@@ -1413,7 +1437,6 @@ html {
                              "item_8"; 
         grid-template-rows: repeat(8, 1fr);
         grid-template-columns: repeat(1, 1fr);
-        row-gap: 0;
         margin-bottom: -23px;
     }
     .line_22 h2 {
@@ -1717,14 +1740,15 @@ html {
     .parallax_out.part1 ._body {
         height: 347px;
     }
-    .parallax_out.part2 ._body,
+    .parallax_out.part2 ._body {
+        height: 547px;
+    }
     .parallax_out.part3 ._body {
-        /* height: 547px; */
-        height: calc(619px + (499 - 619) * ((100vw - 320px) / (575 - 320)));;
+        height: 567px;
     }
     .parallax_out.part1 h2,
     .parallax_out.part1 p {
-        width: 100%;
+        width: 335px;
     }
     .dm-modal h2,
     .dm-modal p {
@@ -1738,13 +1762,13 @@ html {
     .parallax_out.part1 p,
     .dm-modal p {
         margin-bottom: 14px;
-        width: 300px;
+        width: 335px;
     }
     .parallax_out.part2 h2,
     .parallax_out.part2 p,
     .parallax_out.part3 h2,
     .parallax_out.part3 p {
-        width: 100%;
+        width: 335px;
     }
     .parallax_out.part2 p,
     .parallax_out.part3 p {
@@ -1753,6 +1777,26 @@ html {
     .parallax_out.part2 p.last,
     .parallax_out.part3 p.last {
         margin-bottom: 16px;
+    }
+}
+/* < 374px */
+@media screen and (max-width: 374px) {
+    .parallax_out.part1 ._body {
+        height: 376px;
+    }
+    .parallax_out.part2 ._body {
+        height: 627px;
+    }
+    .parallax_out.part3 ._body {
+        height: 607px;
+    }
+    .parallax_out.part1 h2,
+    .parallax_out.part1 p,
+    .parallax_out.part2 h2,
+    .parallax_out.part2 p,
+    .parallax_out.part3 h2,
+    .parallax_out.part3 p {
+        width: 280px;
     }
 }
 /**
@@ -1826,7 +1870,7 @@ html {
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.02em;
 }
 .dm-modal .input_phone::placeholder {
     color: #282828;
