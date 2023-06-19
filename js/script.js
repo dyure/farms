@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if ($('#button_phone' + ID).hasClass('active')) {
             $('#form' + ID).addClass('_sending');
-            const response = await fetch('sendmail.php', {
+            const response = await fetch('https://lineferm.ru/sendmail.php', {
                 method: 'POST',
                 body: formData
             });
@@ -83,4 +83,65 @@ document.addEventListener('DOMContentLoaded', () => {
             $('#error_input' + ID).addClass('active');
         }
     }
+});
+
+$(document).on('ready', () => {
+    $('.slider').slick({
+        slidesToShow:1,
+        slidesToScroll:1,
+        arrows:true,
+        dots:true,
+        variableWidth:false,
+        responsive:[
+            {
+                breakpoint:1200,
+                settings:{
+                    arrows:false,
+                    variableWidth:true,
+                }
+            },
+            {
+                breakpoint:768,
+                settings:{
+                    arrows:false,
+                    variableWidth:true,
+                }
+            }
+        ]
+    });
+    $('.slider').on('afterChange', function(){
+        $('.last_slide').css('display','grid');
+    });
+
+    $('.quest').on('click', function () {
+        $(this).toggleClass('active').next().slideToggle();
+        $('.quest').not(this).removeClass('active').next().slideUp();
+    });
+
+    function windowSize(){
+        if ($(window).width() <= '575'){
+            $('.mySwiper').attr('slides-per-view', 'auto');
+        } else {
+            $('.mySwiper').attr('slides-per-view', '2');
+        }
+    }
+
+    $(window).on('load resize', windowSize);
+
+    $(".soundoff").on('click', function () {
+        if( $(this).parent().find("video").prop('muted') ) {
+            $('.soundoff').html('<img src="https://lineferm.ru/wp/wp-content/themes/d5/img/on.png" alt="" />');
+            $(this).parent().find("video").prop('muted', false);
+        } else {
+            $('.soundoff').html('<img src="https://lineferm.ru/wp/wp-content/themes/d5/img/off.png" alt="" />');
+            $(this).parent().find("video").prop('muted', true);
+        }
+    });
+
+    $('.consult').on('click', () => {
+        $('.dm-overlay').css('display', 'block');
+    });
+    $('.close').on('click', () => {
+        $('.dm-overlay').css('display', 'none');
+    });
 });
