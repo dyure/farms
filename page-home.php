@@ -104,7 +104,7 @@
                         <div class="f_600_18_25 item_1">Выставочные&nbsp;стенды и&nbsp;промостойки</div>
                         <div class="f_600_18_25 item_2">Выездные мероприятия</div>
                         <div class="f_600_18_25 item_3">Каркас для баннера и&nbsp;плаката</div>
-                        <div class="f_600_18_25 item_4">Сценические ширмы для&nbsp;декораций</div>
+                        <div class="f_600_18_25 item_4">Сценические ширмы для&nbsp;декорации</div>
                         <div class="f_600_18_25 item_5">Торговое оборудование</div>
                         <div class="f_600_18_25 item_6">Дизайн в&nbsp;интерьере</div>
                     </div>
@@ -400,8 +400,8 @@
                     <div class="img1"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_left.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_right.png'; ?>" alt=""></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -413,8 +413,8 @@
                     <div class="img2"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_left.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_right.png'; ?>" alt=""></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -426,8 +426,8 @@
                     <div class="img3"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="auto">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_left.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_right.png'; ?>" alt=""></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -447,7 +447,7 @@
                 </div>
                 <h2 id="form_title2" class="f_600_35_40 white">Аренда ферм<br>SignImpress</h2>
                 <p id="form_text_first2" class="f_600_16_20 white">Мы предлагаем аренду металлических ферм для&nbsp;создания необходимых конструкций для&nbsp;вашего мероприятия.</p>
-                <p id="form_text_last2" class="f_600_16_20 white last">Также мы готовы предоставить эту конструкцию на&nbsp;«тест-драйв» в&nbsp;формате аренды и&nbsp;если вы&nbsp;захотите приобрести конструкцию то&nbsp;стоимость аренды будет учтена в&nbsp;оплату изделия. Аренда доступна только в&nbsp;городах где размещены выставочные залы нашей компании.</p>
+                <p id="form_text_last2" class="f_600_16_20 white last">Также мы готовы предоставить эту конструкцию на&nbsp;«тест-драйв» в&nbsp;формате аренды и&nbsp;если вы&nbsp;захотите приобрести конструкцию, то&nbsp;стоимость аренды будет учтена в&nbsp;оплату изделия. Аренда доступна только в&nbsp;городах, где размещены выставочные залы нашей компании.</p>
                 <form id="form2" class="form_phone" action="#">
                     <input id="2" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
                     <div id="error_input2" class="f_600_14_26">Введите корректный номер</div>
@@ -472,14 +472,16 @@
 ?>
                 <div class="slider_items">
                     <div class="item_1">
-                        <img data-lazy="<?php echo get_field('photo_left'); ?>" alt="">
+                        <?php echo wp_get_attachment_image(get_field('photo_left'), 'full'); ?>
+                        <!-- <img data-lazy="<?php //echo get_field('photo_left'); ?>" alt=""> -->
                         <div class="slider_text desktop">
                             <p class="f_600_18_25 first"><?php echo get_the_title(); ?></p>
                             <p class="f_400_18_20 second"><?php echo get_field('subtitle'); ?></p>    
                         </div>
                     </div>
                     <div class="item_2">
-                        <img data-lazy="<?php echo get_field('photo_right'); ?>" alt="">
+                        <?php echo wp_get_attachment_image(get_field('photo_right'), 'full'); ?>
+                        <!-- <img data-lazy="<?php //echo get_field('photo_right'); ?>" alt=""> -->
                         <div class="slider_text mobile">
                             <p class="f_600_18_25 first"><?php echo get_the_title(); ?></p>
                             <p class="f_400_18_20 second"><?php echo get_field('subtitle'); ?></p>    
@@ -533,51 +535,24 @@
                 <h2 class="f_600_35_40 red"><a name="faq">FAQ</a></h2>
             </div>
             <div id="quest_items">
+            <?php
+    $args = array('post_type' => 'faq', 'posts_per_page' => -1, 'order' => 'ASC');
+    $the_query = new WP_Query($args);
+    if ($the_query->have_posts()) {
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+?>
                 <div class="quest">
-                    <p class="f_600_18_25">Какая толщина прута у&nbsp;металлической фермы?</p>
+                    <p class="f_600_18_25"><?php echo get_the_title(); ?></p>
                 </div>
                 <div class="answ">
-                    <p class="f_400_18_20">Line 12 толщина прута = 5 мм.</p>
-                    <p class="f_400_18_20">Line 22 толщина прута = 5.5 мм.</p>
+                    <p class="f_400_18_20"><?php echo get_field('answer'); ?></p>
                 </div>
-                <div class="quest">
-                    <p class="f_600_18_25">Как правильно выбрать толщину ферм для&nbsp;конструкций?</p>
-                </div>
-                <div class="answ">
-                    <p class="f_400_18_20">Line12 Внутри помещения.</p>
-                    <p class="f_400_18_20">Подходит для крепления легких предметов (баннера, гирлянды, светильников и&nbsp;др.).</p>
-                    <p class="f_400_18_20">Line22 уличное и&nbsp;внутреннее использование. Подходит для&nbsp;крепления тяжелых предметов (проф. прожектора, светодиодного, экрана и&nbsp;др.).</p>
-                </div>
-                <div class="quest">
-                    <p class="f_600_18_25">Что необходимо для&nbsp;устойчивости конструкции?</p>
-                </div>
-                <div class="answ">
-                    <p class="f_400_18_20">Конструкцию можно закрепить с&nbsp;помощью анкеров или&nbsp;воспользоваться элементом из&nbsp;нашего ассортимента -&nbsp;аутригер.</p>
-                </div>
-                <div class="quest">
-                    <p class="f_600_18_25">На какой срок можно арендовать фермовые конструкции?</p>
-                </div>
-                <div class="answ">
-                    <p class="f_400_18_20">Срок аренды 3 дня (большее количество дней рассчитывается индивидуально).</p>
-                </div>
-                <div class="quest">
-                    <p class="f_600_18_25">Есть ли сертификаты по весовым нагрузкам?</p>
-                </div>
-                <div class="answ">
-                    <p class="f_400_18_20">Так как металлические фермы не&nbsp;являются профессиональным прокатным оборудованием, они не&nbsp;проходили процедуры сертифицированния.</p>
-                </div>
-                <div class="quest">
-                    <p class="f_600_18_25">Необходима визуализация конструкции, возможна ли?</p>
-                </div>
-                <div class="answ">
-                    <p class="f_400_18_20">Да, нам необходимы примерные размеры вашего запроса. Мы&nbsp;нарисуем конструкцию и&nbsp;отправим вам фото для&nbsp;согласования.</p>
-                </div>
-                <div class="quest last">
-                    <p class="f_600_18_25">Как получить прайс на металлические конструкции?</p>
-                </div>
-                <div class="answ">
-                    <p class="f_400_18_20">Вы можете заполнить форму, менеджер свяжется с&nbsp;вами и&nbsp;отправит актуальные цены на&nbsp;продукцию или&nbsp;перейти на&nbsp;сайт <a class="a_faq" href="https://sepcom.ru/">sepcom.ru</a></p>
-                </div>
+<?php
+        }
+    }
+    wp_reset_postdata();
+?>
             </div>
         </div>
     </section>
