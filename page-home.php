@@ -44,8 +44,13 @@
                     <p class="f_600_18_25">Мы свяжемся с вами в&nbsp;течение&nbsp;рабочего&nbsp;дня</p>
                     <form id="form4" class="form_phone" action="#">
                         <input id="4" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
+                        <input type="hidden" id="hidden4" name="fldHidden" value="4">
                         <div id="error_input4" class="f_600_14_26">Введите корректный номер</div>
                         <button id="button_phone4" type="submit">Заказать консультацию</button>
+                        <div class="check">
+                            <input class="custom-checkbox-black" type="checkbox" id="check4" name="fldLegal" checked>
+                            <label class="f_400_13_25" for="check4">Я согласен на обработку своих персональных данных</label>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -188,8 +193,13 @@
                 <p class="f_600_18_25 white">Мы свяжемся с вами в&nbsp;течение&nbsp;рабочего&nbsp;дня</p>
                 <form id="form1" class="form_phone">
                     <input id="1" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
+                    <input type="hidden" id="hidden1" name="fldHidden" value="1">
                     <div id="error_input1" class="f_600_14_26">Введите корректный номер</div>
-                    <button id="button_phone1" type="submit">Заказать консультацию</button>
+                    <button id="button_phone1" type="submit">Заказать консультацию</button><br>
+                    <div class="check">
+                        <input class="custom-checkbox" type="checkbox" id="check1" name="fldLegal" checked>
+                        <label class="f_400_13_25 white" for="check1">Я согласен на обработку своих персональных данных</label>
+                    </div>
                 </form>
             </div>
         </div>
@@ -450,8 +460,13 @@
                 <p id="form_text_last2" class="f_600_16_20 white last">Также мы готовы предоставить эту конструкцию на&nbsp;«тест-драйв» в&nbsp;формате аренды и&nbsp;если вы&nbsp;захотите приобрести конструкцию, то&nbsp;стоимость аренды будет учтена в&nbsp;оплату изделия. Аренда доступна только в&nbsp;городах, где размещены выставочные залы нашей компании.</p>
                 <form id="form2" class="form_phone" action="#">
                     <input id="2" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
+                    <input type="hidden" id="hidden2" name="fldHidden" value="2">
                     <div id="error_input2" class="f_600_14_26">Введите корректный номер</div>
-                    <button id="button_phone2" type="submit">Заказать консультацию</button>
+                    <button id="button_phone2" type="submit">Заказать консультацию</button><br>
+                    <div class="check">
+                        <input class="custom-checkbox" type="checkbox" id="check2" name="fldLegal" checked>
+                        <label class="f_400_13_25 white" for="check2">Я согласен на обработку своих персональных данных</label>
+                    </div>
                 </form>
             </div>
         </div>
@@ -508,8 +523,13 @@
                 <p id="form_text_last3" class="f_600_16_20 white last">А для более требовательных заказчиков мы&nbsp;готовы предложить создание визуализации будущей металлической конструкции в&nbsp;3D&nbsp;формате (услуга рассчитывается отдельно). Полную информацию вы&nbsp;можете уточнить у&nbsp;наших менеджеров.</p>
                 <form id="form3" class="form_phone" action="#">
                     <input id="3" class="input_phone _required" type="tel" autocomplete="off" name="fldPhone" placeholder="Введите телефон*">
+                    <input type="hidden" id="hidden3" name="fldHidden" value="3">
                     <div id="error_input3" class="f_600_14_26">Введите корректный номер</div>
-                    <button id="button_phone3" type="submit">Заказать консультацию</button>
+                    <button id="button_phone3" type="submit">Заказать консультацию</button><br>
+                    <div class="check">
+                        <input class="custom-checkbox" type="checkbox" id="check3" name="fldLegal" checked>
+                        <label class="f_400_13_25 white" for="check3">Я согласен на обработку своих персональных данных</label>
+                    </div>
                 </form>
             </div>
         </div>

@@ -1,4 +1,8 @@
 <?php
+
+// important!
+// this file must be in the root directory!
+
 error_reporting(E_ALL); 
 ini_set("display_errors", 1);
 //Import PHPMailer classes into the global namespace
@@ -42,9 +46,26 @@ try {
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Это письмо с сайта Металлические фермы';
-    $mail->Body    = 'Телефон: ';
+    $mail->isHTML(true);                              //Set email format to HTML
+    if (trim(!empty($_POST['fldHidden']))){
+        $intAddInfo = $_POST['fldHidden'];
+    }
+    switch ($intAddInfo) {
+        case 1:
+            $strAddInfo = 'консультацию';
+        break;
+        case 2:
+            $strAddInfo = 'консультацию по аренде';
+        break;
+        case 3:
+            $strAddInfo = 'консультацию по расчету и визуализации';
+        break;
+        case 4:
+            $strAddInfo = 'консультацию';
+        break;
+    }
+    $mail->Subject = 'Заявка на ' . $strAddInfo . ' с сайта lineferm.ru';
+    $mail->Body    = 'Менеджер свяжись с клиентом в кратчайшие сроки по номеру: ';
     if (trim(!empty($_POST['fldPhone']))){
         $mail->Body .= $_POST['fldPhone'];
     }

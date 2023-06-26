@@ -9,14 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < forms.length; i++) {
         const buttonID = '#button_phone' + forms[i][0].id;
         const inputPhone = document.getElementById(forms[i][0].id);
+        const inputCheck = document.getElementById(forms[i][3].id);
+        //
         inputPhone.oninput = function() {
-            if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11) {
+            if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11 && inputCheck.checked === true) {
                 $(buttonID).addClass('active');
             } else {
                 $(buttonID).removeClass('active');
             }
         }
-    }
+        inputCheck.onchange = function() {
+            if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11 && inputCheck.checked === true) {
+                $(buttonID).addClass('active');
+            } else {
+                $(buttonID).removeClass('active');
+            }
+        }
+}
 
     const form1 = document.getElementById('form1');
     form1.addEventListener('submit', formSend);
