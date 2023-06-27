@@ -14,15 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
         inputPhone.oninput = function() {
             if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11 && inputCheck.checked === true) {
                 $(buttonID).addClass('active');
+                $('#error_input' + forms[i][0].id).removeClass('active');
             } else {
                 $(buttonID).removeClass('active');
+                $('#error_input' + forms[i][0].id).addClass('active');
             }
         }
         inputCheck.onchange = function() {
             if ((inputPhone.value.replace(/[\D]+/g, '').length) == 11 && inputCheck.checked === true) {
                 $(buttonID).addClass('active');
+                $('#error_input' + forms[i][0].id).removeClass('active');
             } else {
                 $(buttonID).removeClass('active');
+                $('#error_input' + forms[i][0].id).addClass('active');
             }
         }
 }
