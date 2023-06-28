@@ -35,6 +35,9 @@ input:-webkit-autofill {
 html {
     scroll-behavior: smooth;
 }
+h1 {
+    display: none;
+}
 /**
 *
 * fonts
@@ -67,7 +70,7 @@ html {
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.02em;
 }
 .f_600_18_25_adv {
     font-style: normal;

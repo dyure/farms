@@ -43,4 +43,12 @@
             the_post_thumbnail( array(100, 100) );
         }
     }
+
+    // удалим описание из заголовка для главной страницы
+    add_filter( 'document_title_parts', function( $title ) {
+        if( isset( $title['tagline'] ) ){
+            unset( $title['tagline'] );
+        }
+        return $title;
+    } );
 ?>

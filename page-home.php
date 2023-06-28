@@ -1,26 +1,27 @@
-<?php global $d5_options; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title(); ?></title>
+    <title><?php echo wp_get_document_title(); ?></title>
+    <meta name="description" content="<?php echo get_bloginfo('description', 'display'); ?>">
     <?php wp_head(); ?>
     <link rel="canonical" href="https://lineferm.ru/" />
 	<meta property="og:locale" content="ru_RU" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Металлические фермы" />
-	<meta property="og:description" content="Металлические фермы для подвесных и наземных конструкций" />
+	<meta property="og:title" content="<?php echo wp_get_document_title(); ?>" />
+	<meta property="og:description" content="<?php echo get_bloginfo('description', 'display'); ?>" />
 	<meta property="og:url" content="https://lineferm.ru/" />
-	<meta property="og:site_name" content="Металлические фермы" />
+	<meta property="og:site_name" content="<?php echo wp_get_document_title(); ?>" />
 	<meta property="og:image" content="https://lineferm.ru/wp/wp-content/themes/d5/img/forlink.jpg" />
 	<meta property="og:image:width" content="1280" />
 	<meta property="og:image:height" content="800" />
 	<meta property="og:image:type" content="image/jpeg" />
 </head>
 <body>
-
 <?php get_header(); ?>
+
+    <h1>Металлические фермы для подвесных и наземных конструкций</h1>
 
     <div class="dm-overlay" id="win1">
         <div class="dm-table">
@@ -213,7 +214,7 @@
             <div class="items_2">
                 <div class="line12_col item_1">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line12_01.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line12_01.png'; ?>" alt="черная металлическая ферма с сечением 12 см арочная" title="Ферма металлическая Line 12*12*100 (¼ circle)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 12*12*100 (¼&nbsp;circle)</p>
@@ -222,7 +223,7 @@
                 </div>
                 <div class="line12_col item_2">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line12_02.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line12_02.png'; ?>" alt="черная металлическая ферма с сечением 12 см и длиной 2 метра" title="Ферма металлическая Line 12*12*200 (2 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 12*12*200 (2&nbsp;м)</p>
@@ -231,7 +232,7 @@
                 </div>
                 <div class="line12_col item_3">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line12_03.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line12_03.png'; ?>" alt="черная металлическая ферма с сечением 12 см и длиной 1,5 метра" title="Ферма металлическая Line 12*12*150 (1,5 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 12*12*150 (1,5&nbsp;м)</p>
@@ -240,7 +241,7 @@
                 </div>
                 <div class="line12_col item_4">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line12_04.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line12_04.png'; ?>" alt="черная металлическая ферма с сечением 12 см и длиной 1 метр" title="Ферма металлическая Line 12*12*100 (1 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 12*12*100 (1&nbsp;м)</p>
@@ -249,7 +250,7 @@
                 </div>
                 <div class="line12_col item_5">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line12_05.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line12_05.png'; ?>" alt="черная металлическая ферма с сечением 12 см и длиной 0,5 метра" title="Ферма металлическая Line 12*12*50 (0,5 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 12*12*50 (0,5&nbsp;м)</p>
@@ -258,7 +259,7 @@
                 </div>
                 <div class="line12_col item_6">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line12_06.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line12_06.png'; ?>" alt="квадратный соединительный элемент для ферм с сечением 12 см" title="Ферма металлическая Line 12*12*12см куб">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 12*12*12</p>
@@ -279,12 +280,12 @@
                     <div class="img1"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_01_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_01_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_01_left.png'; ?>" alt="баннерная растяжка на металлических фермах" title="Баннерная растяжка  3000*3240*1120мм"></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_01_right.png'; ?>" alt="металлические конструкции для баннерной растяжки" title="Металлические фермы для баннерной растяжки 3000*3240*1120мм"></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
-                        <p class="f_600_16_20 first">Фестиваль. Баннерная растяжка 3000*3240*1120мм</p>
+                        <p class="f_600_16_20 first">Баннерная растяжка 3000*3240*1120мм</p>
                         <p class="f_500_16_25">Line 12*100 - 2шт, 12*150&nbsp;-&nbsp;8шт</p>
                     </div>
                 </div>
@@ -292,21 +293,21 @@
                     <div class="img2"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_02_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_02_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_02_left.png'; ?>" alt="подвесная конструкция из металлических ферм" title="Подвесная конструкция 1240*1100*120мм"></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_02_right.png'; ?>" alt="конструкции из металлических ферм для оборудования выставки" title="Подвесная и выставочная конструкция 1240*1100*120мм"></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
                         <p class="f_600_16_20 first">Выставка 2240*2360*120мм. Подвесная конструкция 1240*1100*120мм</p>
-                        <p class="f_500_16_25">Line 12*100 - 10шт, 12*50&nbsp;-&nbsp;4шт, 12*100&nbsp;-&nbsp;4шт</p>
+                        <p class="f_500_16_25">Line 12*100 - 14шт 12*50 - 4шт</p>
                     </div>
                 </div>
                 <div class="line12_col_use item_3">
                     <div class="img3"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_03_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_03_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_03_left.png'; ?>" alt="стол из черных металлических ферм" title="Стол из металлических ферм 1500*620*620мм"></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line12_use_03_right.png'; ?>" alt="стол из черных металлических конструкций" title="Металлические конструкции для стола 1500*620*620мм"></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -326,7 +327,7 @@
             <div class="items_4">
                 <div class="line22_col item_1">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_01.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_01.png'; ?>" alt="черная металлическая ферма с сечением 22 см арочная" title="Ферма металлическая Line 22*22*100 (¼ circle)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*100 (¼&nbsp;circle)</p>
@@ -335,7 +336,7 @@
                 </div>
                 <div class="line22_col item_2">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_02.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_02.png'; ?>" alt="черная металлическая ферма с сечением 22 см и длиной 3 метра" title="Ферма металлическая Line 22*22*300 (3 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*300 (3&nbsp;м)</p>
@@ -344,7 +345,7 @@
                 </div>
                 <div class="line22_col item_3">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_03.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_03.png'; ?>" alt="черная металлическая ферма с сечением 22 см и длиной 2 метра" title="Ферма металлическая Line 22*22*200 (2 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*200 (2&nbsp;м)</p>
@@ -353,7 +354,7 @@
                 </div>
                 <div class="line22_col item_4">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_04.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_04.png'; ?>" alt="черная металлическая ферма с сечением 22 см и длиной 1,5 метра" title="Ферма металлическая Line 22*22*150 (1,5 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*150 (1,5&nbsp;м)</p>
@@ -362,7 +363,7 @@
                 </div>
                 <div class="line22_col item_5">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_05.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_05.png'; ?>" alt="металлическая ферма в форме двухскатной крыши " title="Ферма металлическая Line 22*22 Комплект «Двухскатная крыша»">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22 Комплект <span class="f_400_18_20_cover">«Двухскатная крыша»</span></p>
@@ -371,7 +372,7 @@
                 </div>
                 <div class="line22_col item_6">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_06.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_06.png'; ?>" alt="черная металлическая ферма с сечением 22 см и длиной 1 метр" title="Ферма металлическая Line 22*22*100 (1 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*100 (1&nbsp;м)</p>
@@ -380,7 +381,7 @@
                 </div>
                 <div class="line22_col item_7">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_07.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_07.png'; ?>" alt="черная металлическая ферма с сечением 22 см и длиной 0,5 метра" title="Ферма металлическая Line 22*22*50 (0,5 м)">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*50 (0,5&nbsp;м)</p>
@@ -389,7 +390,7 @@
                 </div>
                 <div class="line22_col item_8">
                     <div class="img">
-                        <img src="<?php echo D5_IMG_DIR . '/line22_08.png'; ?>" alt="">
+                        <img src="<?php echo D5_IMG_DIR . '/line22_08.png'; ?>" alt="квадратный соединительный элемент для ферм с сечением 22 см" title="Ферма металлическая Line 22*22*22см куб">
                     </div>
                     <div class="text">
                         <p class="f_600_18_25 first">Line 22*22*22</p>
@@ -410,8 +411,8 @@
                     <div class="img1"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_left.png'; ?>" alt="выставочные стенды из металлических ферм" title="Выставочные стенды из металлических ферм 3940*3440*3000мм"></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_02_right.png'; ?>" alt="модульные конструкции для выставки из металлических ферм" title="Модульные конструкции для выставки 3940*3440*3000мм"></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -423,8 +424,8 @@
                     <div class="img2"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="2">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_left.png'; ?>" alt="свадебная фотозона из металлических ферм" title="Свадебная конструкция из металлических ферм 1940*1000*3440мм"></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_03_right.png'; ?>" alt="модульные конструкции для свадебной фотозоны" title="Модульные конструкции для свадебной фотозоны 1940*1000*3440мм"></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -436,8 +437,8 @@
                     <div class="img3"></div>
                     <div class="use_mobile">
                         <swiper-container class="mySwiper" space-between="30" slides-per-view="auto">
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_left.png'; ?>" alt=""></swiper-slide>
-                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_right.png'; ?>" alt=""></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_left.png'; ?>" alt="сценическая конструкция из металлических ферм" title="Сценическая конструкция из металлических ферм 2940*2440*2500мм"></swiper-slide>
+                            <swiper-slide><img src="<?php echo D5_IMG_DIR . '/line22_use_01_right.png'; ?>" alt="световая конструкция из металлических ферм" title="Металлические конструкции для сцены 2940*2440*2500мм"></swiper-slide>
                         </swiper-container>
                     </div>
                     <div class="text">
@@ -484,19 +485,19 @@
     if ($the_query->have_posts()) {
         while ($the_query->have_posts()) {
             $the_query->the_post();
+            $title_left = [ 'title' => get_the_title( get_field('photo_left') ) ];
+            $title_right = [ 'title' => get_the_title( get_field('photo_right') ) ];
 ?>
                 <div class="slider_items">
                     <div class="item_1">
-                        <?php echo wp_get_attachment_image(get_field('photo_left'), 'full'); ?>
-                        <!-- <img data-lazy="<?php //echo get_field('photo_left'); ?>" alt=""> -->
+                        <?php echo wp_get_attachment_image(get_field('photo_left'), 'full', false, $title_left); ?>
                         <div class="slider_text desktop">
                             <p class="f_600_18_25 first"><?php echo get_the_title(); ?></p>
                             <p class="f_400_18_20 second"><?php echo get_field('subtitle'); ?></p>    
                         </div>
                     </div>
                     <div class="item_2">
-                        <?php echo wp_get_attachment_image(get_field('photo_right'), 'full'); ?>
-                        <!-- <img data-lazy="<?php //echo get_field('photo_right'); ?>" alt=""> -->
+                        <?php echo wp_get_attachment_image(get_field('photo_right'), 'full', false, $title_right); ?>
                         <div class="slider_text mobile">
                             <p class="f_600_18_25 first"><?php echo get_the_title(); ?></p>
                             <p class="f_400_18_20 second"><?php echo get_field('subtitle'); ?></p>    
