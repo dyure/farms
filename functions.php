@@ -7,6 +7,7 @@
     define('D5_CSS_DIR', D5_THEME_ROOT . '/css');
     define('D5_JS_DIR', D5_THEME_ROOT . '/js');
     define('D5_IMG_DIR', D5_THEME_ROOT . '/img');
+    define('D5_DOC_DIR', D5_THEME_ROOT . '/docs');
 
     add_action('wp_enqueue_scripts', function () {
         wp_enqueue_style('theme', get_stylesheet_uri());

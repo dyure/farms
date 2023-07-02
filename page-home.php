@@ -50,7 +50,7 @@
                         <button id="button_phone4" type="submit">Заказать консультацию</button>
                         <div class="check">
                             <input class="custom-checkbox-black" type="checkbox" id="check4" name="fldLegal" checked>
-                            <label class="f_400_13_25" for="check4">Я согласен на обработку своих персональных данных</label>
+                            <label class="f_400_13_25" for="check4"><a class="black" target="_blank" href="<?php echo D5_DOC_DIR . '/approval.pdf'; ?>">Я согласен на обработку своих персональных данных</a></label>
                         </div>
                     </form>
                 </div>
@@ -74,13 +74,13 @@
                     <li><a href="#faq" class="f_600_16_20 white fromLeft">FAQ</a></li>
                 </ul>
                 <div class="catalogue f_600_16_20 white">
-                    <a href="<?php echo D5_IMG_DIR . '/catalogue.pdf'; ?>" class="fromLeft">КАТАЛОГ&nbsp;ФЕРМ</a>
+                    <a target="_blank" href="<?php echo D5_IMG_DIR . '/catalogue.pdf'; ?>" class="fromLeft">КАТАЛОГ&nbsp;ФЕРМ</a>
                 </div>
                 <div class="consult">
                     <p class="f_600_16_20 white fromLeft">КОНСУЛЬТАЦИЯ</p>
                 </div>
                 <div class="whatsapp">
-                    <a href="https://wa.me/79620701030">
+                    <a target="_blank" href="https://wa.me/79620701030">
                         <img src="<?php echo D5_IMG_DIR . '/WA.png'; ?>" alt="">
                     </a>
                 </div>
@@ -199,7 +199,7 @@
                     <button id="button_phone1" type="submit">Заказать консультацию</button><br>
                     <div class="check">
                         <input class="custom-checkbox" type="checkbox" id="check1" name="fldLegal" checked>
-                        <label class="f_400_13_25 white" for="check1">Я согласен на обработку своих персональных данных</label>
+                        <label class="f_400_13_25 white" for="check1"><a class="white" target="_blank" href="<?php echo D5_DOC_DIR . '/approval.pdf'; ?>">Я согласен на обработку своих персональных данных</a></label>
                     </div>
                 </form>
             </div>
@@ -466,7 +466,7 @@
                     <button id="button_phone2" type="submit">Заказать консультацию</button><br>
                     <div class="check">
                         <input class="custom-checkbox" type="checkbox" id="check2" name="fldLegal" checked>
-                        <label class="f_400_13_25 white" for="check2">Я согласен на обработку своих персональных данных</label>
+                        <label class="f_400_13_25 white" for="check2"><a class="white" target="_blank" href="<?php echo D5_DOC_DIR . '/approval.pdf'; ?>">Я согласен на обработку своих персональных данных</a></label>
                     </div>
                 </form>
             </div>
@@ -488,7 +488,7 @@
             $title_left = [ 'title' => get_the_title( get_field('photo_left') ) ];
             $title_right = [ 'title' => get_the_title( get_field('photo_right') ) ];
 ?>
-                <div class="slider_items">
+                <div class="slider_items<?php if(($the_query->current_post + 1) == ($the_query->post_count)) echo ' last_slide'; ?>">
                     <div class="item_1">
                         <?php echo wp_get_attachment_image(get_field('photo_left'), 'full', false, $title_left); ?>
                         <div class="slider_text desktop">
@@ -529,7 +529,7 @@
                     <button id="button_phone3" type="submit">Заказать консультацию</button><br>
                     <div class="check">
                         <input class="custom-checkbox" type="checkbox" id="check3" name="fldLegal" checked>
-                        <label class="f_400_13_25 white" for="check3">Я согласен на обработку своих персональных данных</label>
+                        <label class="f_400_13_25 white" for="check3"><a class="white" target="_blank" href="<?php echo D5_DOC_DIR . '/approval.pdf'; ?>">Я согласен на обработку своих персональных данных</a></label>
                     </div>
                 </form>
             </div>
@@ -612,7 +612,7 @@
                         <a class="white" href="tel:+79659001010">+7 (965) 900-10-10</a></p>
                 </div>
             </div>
-            <p class="agreed f_400_13_25 white">* согласие на обработку персональных данных</p>
+            <p class="agreed f_400_13_25 white"><a class="white" target="_blank" href="<?php echo D5_DOC_DIR . '/policy.pdf'; ?>">Политика обработки персональных данных</a></p>
         </div>
     </section>
 

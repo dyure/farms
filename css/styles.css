@@ -32,6 +32,9 @@ input:-webkit-autofill {
 .white {
     color: #f6f6f6;
 }
+.black {
+    color: #282828;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -2330,7 +2333,7 @@ h1 {
         margin-bottom: 30px;
     }
     #portfolio_title {
-        padding-left: 115px;
+        padding-left: calc(16px + (115 - 16) * ((100vw - 576px) / (767 - 576)));
     }
     .portfolio ._body {
         max-width: unset;
